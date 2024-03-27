@@ -21,7 +21,7 @@ export const tailwindColors = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
-  primary: {
+  blue: {
     50: "#E7EEFE",
     100: "#CFDDFC",
     200: "#9EBBFA",
@@ -34,9 +34,9 @@ export const tailwindColors = {
     900: "#031130",
     950: "#010918",
   },
-  "primary-content": "#FFFFFF",
-  "primary-focus": generateDarkenColorFrom("#3571F4"),
-  secondary: {
+  "blue-content": "#FFFFFF",
+  "blue-focus": generateDarkenColorFrom("#3571F4"),
+  yellow: {
     50: "#FEF6E7",
     100: "#FCEECF",
     200: "#FADD9E",
@@ -49,8 +49,8 @@ export const tailwindColors = {
     900: "#302203",
     950: "#181101",
   },
-  "secondary-content": "#FFFFFF",
-  "secondary-focus": generateDarkenColorFrom("#F4B735"),
+  "yellow-content": generateForegroundColorFrom("#F4B735"),
+  "yellow-focus": generateDarkenColorFrom("#F4B735"),
   neutral: {
     50: "#F2F2F2",
     100: "#E6E6E6",
@@ -79,7 +79,8 @@ export const tailwindColors = {
     900: "#000933",
     950: "#00041A",
   },
-  "info-content": generateForegroundColorFrom("#0025DD"),
+  "info-content": "#FFF",
+  "info-focus": generateDarkenColorFrom("#0025DD"),
   success: {
     50: "#E5FFEA",
     100: "#CCFFD5",
@@ -94,6 +95,7 @@ export const tailwindColors = {
     950: "#001A04",
   },
   "success-content": generateForegroundColorFrom("#00AE1D"),
+  "success-focus": generateDarkenColorFrom("#00AE1D"),
   warning: {
     50: "#FCFAE9",
     100: "#F8F5D3",
@@ -108,6 +110,7 @@ export const tailwindColors = {
     950: "#161403",
   },
   "warning-content": generateForegroundColorFrom("#E0CE2C"),
+  "warning-focus": generateDarkenColorFrom("#E0CE2C"),
   danger: {
     50: "#FEE6EB",
     100: "#FDCED7",
@@ -121,14 +124,15 @@ export const tailwindColors = {
     900: "#31020B",
     950: "#190105",
   },
-  "danger-content": generateForegroundColorFrom("#E00930"),
+  "danger-content": "#FFF",
+  "danger-focus": generateDarkenColorFrom("#E00930"),
 };
 
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    colors: tailwindColors,
     extend: {
-      colors: tailwindColors,
       container: {
         center: true,
       },

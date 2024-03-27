@@ -1,7 +1,7 @@
-export type Variant =
+export type Color =
+  | "blue"
+  | "yellow"
   | "neutral"
-  | "primary"
-  | "secondary"
   | "info"
   | "success"
   | "warning"

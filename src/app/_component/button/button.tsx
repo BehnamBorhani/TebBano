@@ -17,10 +17,10 @@ const shapeClasses: Record<ButtonShape, string> = {
 };
 
 export const Button: React.FC<ButtonProps> = ({
-  variant,
+  variant = "text",
+  color = "blue",
   size = "normal",
   isDisabled = false,
-  isOutline = false,
   isLoading = false,
   isLink = false,
   shape = "default",
@@ -35,10 +35,10 @@ export const Button: React.FC<ButtonProps> = ({
   const classes = classNames(
     "btn",
     className,
-    { "btn-outline": isOutline },
     { "btn-link": isLink },
     { "animated-icon": animatedIcon },
     { "pointer-events-none opacity-80": isLoading },
+    { [`btn-${color}`]: color },
     { [`btn-${variant}`]: variant },
     { [`${sizeClasses[size]}`]: size },
     { [`${shapeClasses[shape]}`]: shape },

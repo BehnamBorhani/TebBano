@@ -1,0 +1,436 @@
+.btn {
+  @apply inline-flex items-center justify-center text-center transition duration-100 ease-in-out;
+  @apply select-none gap-1 rounded border border-transparent px-4 py-2 no-underline;
+  &:active:hover,
+  &:active:focus {
+    transform: scale(0.97);
+  }
+
+  /* default btn */
+  &-text {
+    &.btn-blue {
+      @apply text-blue;
+
+      &:active {
+        @apply text-blue-700;
+      }
+
+      &:focus {
+        @apply text-blue border-2 border-blue-200;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-blue-300;
+        }
+      }
+    }
+
+    &.btn-yellow {
+      @apply text-yellow;
+
+      &:active {
+        @apply text-yellow-700;
+      }
+
+      &:focus {
+        @apply text-yellow border-2 border-yellow-200;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-yellow-300;
+        }
+      }
+    }
+
+    &.btn-neutral {
+      @apply text-neutral;
+
+      &:active {
+        @apply text-neutral-700;
+      }
+
+      &:focus {
+        @apply border-2 border-neutral-200 text-neutral;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-neutral-300;
+        }
+      }
+    }
+
+    &.btn-info {
+      @apply text-info;
+
+      &:active {
+        @apply text-info-700;
+      }
+
+      &:focus {
+        @apply border-2 border-info-200 text-info;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-info-300;
+        }
+      }
+    }
+
+    &.btn-success {
+      @apply text-success;
+
+      &:active {
+        @apply text-success-700;
+      }
+
+      &:focus {
+        @apply border-2 border-success-200 text-success;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-success-300;
+        }
+      }
+    }
+
+    &.btn-warning {
+      @apply text-warning;
+
+      &:active {
+        @apply text-warning-700;
+      }
+
+      &:focus {
+        @apply border-2 border-warning-200 text-warning;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-warning-300;
+        }
+      }
+    }
+
+    &.btn-danger {
+      @apply text-danger;
+
+      &:active {
+        @apply text-danger-700;
+      }
+
+      &:focus {
+        @apply border-2 border-danger-200 text-danger;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @apply text-danger-300;
+        }
+      }
+    }
+  }
+
+  &-primary {
+    &.btn-blue {
+      @apply bg-blue text-blue-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-blue-300;
+        }
+      }
+
+      &:active {
+        @apply bg-blue-700;
+      }
+
+      &:focus {
+        @apply bg-blue border-2 border-blue-200;
+      }
+    }
+
+    &.btn-yellow {
+      @apply bg-yellow text-yellow-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-yellow-300;
+        }
+      }
+
+      &:active {
+        @apply bg-yellow-600;
+      }
+
+      &:focus {
+        @apply bg-yellow border-2 border-yellow-200;
+      }
+    }
+
+    &.btn-neutral {
+      @apply bg-neutral-200 text-neutral-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-neutral-100;
+        }
+      }
+
+      &:active {
+        @apply bg-neutral-400 text-neutral;
+      }
+
+      &:focus {
+        @apply border-2 border-neutral-200 bg-neutral text-neutral-content;
+      }
+    }
+
+    &.btn-info {
+      @apply bg-info text-info-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-info-400;
+        }
+      }
+
+      &:active {
+        @apply bg-info-600;
+      }
+
+      &:focus {
+        @apply border-2 border-info-300 bg-info;
+      }
+    }
+
+    &.btn-success {
+      @apply bg-success text-success-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-success-400;
+        }
+      }
+
+      &:active {
+        @apply bg-success-600;
+      }
+
+      &:focus {
+        @apply border-2 border-success-400 bg-success;
+      }
+    }
+
+    &.btn-warning {
+      @apply bg-warning text-warning-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-warning-400;
+        }
+      }
+
+      &:active {
+        @apply bg-warning-600;
+      }
+
+      &:focus {
+        @apply border-2 border-warning-400 bg-warning;
+      }
+    }
+
+    &.btn-danger {
+      @apply bg-danger text-danger-content;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply bg-danger-400;
+        }
+      }
+
+      &:active {
+        @apply bg-danger-600;
+      }
+
+      &:focus {
+        @apply border-2 border-danger-400 bg-danger;
+      }
+    }
+  }
+
+  &-secondary {
+    @apply border-yellow bg-yellow text-yellow-content outline-yellow;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-yellow-focus bg-yellow-focus;
+      }
+    }
+  }
+
+  &-outline {
+    @apply border;
+
+    &.btn-blue {
+      @apply text-blue border-blue-300 bg-blue-50;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-blue-300;
+        }
+      }
+
+      &:active {
+        @apply border-blue-700 text-blue-700;
+      }
+
+      &:focus {
+        @apply text-blue border-2 border-blue-200;
+      }
+    }
+
+    &.btn-yellow {
+      @apply text-yellow border-yellow-300 bg-yellow-50;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-yellow-300;
+        }
+      }
+
+      &:active {
+        @apply border-yellow-600 text-yellow-600;
+      }
+
+      &:focus {
+        @apply text-yellow border-2 border-yellow-200;
+      }
+    }
+
+    &.btn-neutral {
+      @apply border-neutral-300 bg-neutral-50 text-neutral-400;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-neutral-300;
+        }
+      }
+
+      &:active {
+        @apply border-neutral-600 text-neutral-600;
+      }
+
+      &:focus {
+        @apply border-2 border-neutral-200 text-neutral-400;
+      }
+    }
+
+    &.btn-info {
+      @apply border-info-300 bg-info-50 text-info;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-info-300;
+        }
+      }
+
+      &:active {
+        @apply border-info-600 text-info-600;
+      }
+
+      &:focus {
+        @apply border-2 border-info-200 text-info;
+      }
+    }
+
+    &.btn-warning {
+      @apply border-warning-400 bg-warning-50 text-warning;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-warning-400;
+        }
+      }
+
+      &:active {
+        @apply border-warning-600 text-warning-600;
+      }
+
+      &:focus {
+        @apply border-2 border-warning-200 text-warning;
+      }
+    }
+
+    &.btn-danger {
+      @apply border-danger-400 bg-danger-50 text-danger;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-danger-400;
+        }
+      }
+
+      &:active {
+        @apply border-danger-600 text-danger-600;
+      }
+
+      &:focus {
+        @apply border-2 border-danger-200 text-danger;
+      }
+    }
+  }
+
+  &-link {
+    @apply text-blue h-auto !border-transparent !bg-transparent px-1 !outline-none;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-transparent bg-transparent underline;
+      }
+    }
+  }
+
+  &[disabled],
+  &:disabled {
+    @apply text-neutral-300 pointer-events-none border-opacity-0 bg-neutral bg-opacity-20 text-opacity-20;
+  }
+  @media (hover: hover) {
+    &[disabled]:hover,
+    &:disabled:hover {
+      @apply text-neutral-300 border-opacity-0 bg-neutral bg-opacity-20 text-opacity-20;
+    }
+  }
+
+  /* size and shape */
+  &-xs {
+    @apply h-6 px-2;
+    font-size: 0.75rem;
+  }
+  &-sm {
+    @apply h-8 px-3;
+    font-size: 0.875rem;
+  }
+  &-md {
+    @apply h-12 px-4;
+    font-size: 0.875rem;
+  }
+  &-lg {
+    @apply h-16 px-6;
+    font-size: 1.125rem;
+  }
+  &-wide {
+    @apply w-64 flex-nowrap;
+  }
+  &-block {
+    @apply w-full;
+  }
+  &-square {
+    @apply h-12 w-12 p-0;
+    &:where(.btn-xs) {
+      @apply h-6 w-6 p-0;
+    }
+    &:where(.btn-sm) {
+      @apply h-8 w-8 p-0;
+    }
+    &:where(.btn-lg) {
+      @apply h-16 w-16 p-0;
+    }
+  }
+}

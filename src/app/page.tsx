@@ -1,9 +1,13 @@
+import { Button } from "./_component/button";
+
 export default function Home() {
   return (
     <>
-      <h1 className="w-52 text-3xl font-bold shadow-lg">
-        سلام به درسمنی های عزیزم<span className="text-success">♥️</span>
-      </h1>
+      <div className="flex h-40 items-center justify-center">
+        <Button variant="outline" color="danger">
+          Click Here
+        </Button>
+      </div>
     </>
   );
 }
