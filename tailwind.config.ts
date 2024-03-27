@@ -21,7 +21,7 @@ export const tailwindColors = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
-  blue: {
+  primary: {
     50: "#E7EEFE",
     100: "#CFDDFC",
     200: "#9EBBFA",
@@ -34,9 +34,9 @@ export const tailwindColors = {
     900: "#031130",
     950: "#010918",
   },
-  "blue-content": "#FFFFFF",
-  "blue-focus": generateDarkenColorFrom("#3571F4"),
-  yellow: {
+  "primary-content": "#FFFFFF",
+  "primary-focus": generateDarkenColorFrom("#3571F4"),
+  secondary: {
     50: "#FEF6E7",
     100: "#FCEECF",
     200: "#FADD9E",
@@ -49,8 +49,8 @@ export const tailwindColors = {
     900: "#302203",
     950: "#181101",
   },
-  "yellow-content": "#FFFFFF",
-  "yellow-focus": generateDarkenColorFrom("#F4B735"),
+  "secondary-content": "#FFFFFF",
+  "secondary-focus": generateDarkenColorFrom("#F4B735"),
   neutral: {
     50: "#F2F2F2",
     100: "#E6E6E6",
