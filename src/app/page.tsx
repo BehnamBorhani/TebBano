@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className="flex h-40 items-center justify-center">
-        <Button variant="outline" color="danger">
+        <Button variant="primary" color="blue" isLoading>
           Click Here
         </Button>
       </div>

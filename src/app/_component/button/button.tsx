@@ -37,7 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
     className,
     { "btn-link": isLink },
     { "animated-icon": animatedIcon },
-    { "pointer-events-none opacity-80": isLoading },
+    { "pointer-events-none opacity-90": isLoading },
     { [`btn-${color}`]: color },
     { [`btn-${variant}`]: variant },
     { [`${sizeClasses[size]}`]: size },
