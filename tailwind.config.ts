@@ -49,7 +49,7 @@ export const tailwindColors = {
     900: "#302203",
     950: "#181101",
   },
-  "yellow-content": generateForegroundColorFrom("#F4B735"),
+  "yellow-content": "#FFF",
   "yellow-focus": generateDarkenColorFrom("#F4B735"),
   neutral: {
     50: "#F2F2F2",
@@ -94,7 +94,7 @@ export const tailwindColors = {
     900: "#003309",
     950: "#001A04",
   },
-  "success-content": generateForegroundColorFrom("#00AE1D"),
+  "success-content": "#FFF",
   "success-focus": generateDarkenColorFrom("#00AE1D"),
   warning: {
     50: "#FCFAE9",
@@ -109,7 +109,7 @@ export const tailwindColors = {
     900: "#2C2907",
     950: "#161403",
   },
-  "warning-content": generateForegroundColorFrom("#E0CE2C"),
+  "warning-content": "#FFF",
   "warning-focus": generateDarkenColorFrom("#E0CE2C"),
   danger: {
     50: "#FEE6EB",

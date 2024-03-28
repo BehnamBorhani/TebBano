@@ -17,7 +17,7 @@ const shapeClasses: Record<ButtonShape, string> = {
 };
 
 export const Button: React.FC<ButtonProps> = ({
-  variant = "text",
+  variant = "primary",
   color = "blue",
   size = "normal",
   isDisabled = false,
@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   className,
   ...rest
-}: ButtonProps) => {
+}) => {
   const classes = classNames(
     "btn",
     className,

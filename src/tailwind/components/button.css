@@ -467,6 +467,23 @@
       }
     }
 
+    &.btn-success {
+      @apply border-success-300 bg-success-50 text-success;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-success-300;
+        }
+      }
+
+      &:active {
+        @apply border-success-600 text-success-600;
+      }
+
+      &:focus {
+        @apply border-2 border-success-200 text-success;
+      }
+    }
+
     &.btn-warning {
       @apply border-warning-400 bg-warning-50 text-warning;
       @media (hover: hover) {
@@ -526,7 +543,7 @@
     @apply h-6 px-2;
     font-size: 0.75rem;
   }
-  
+
   &-sm {
     @apply h-8 px-3;
     font-size: 0.875rem;
@@ -538,7 +555,7 @@
   }
 
   &-lg {
-    @apply h-16 px-6;
+    @apply h-14 px-6;
     font-size: 1.125rem;
   }
 
