@@ -4,6 +4,7 @@ import "./globals.css";
 import QueryProvider from "@/providers/react-query-provider";
 import { Header } from "./_component/header";
 import { Footer } from "./_component/footer";
+import StoreProvider from "@/providers/redux-store-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={inter.className}>
-        <QueryProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </QueryProvider>
+      <body
+        className={`${inter.className} grid min-h-screen grid-rows-[80px_1fr_auto]`}
+      >
+        <StoreProvider>
+          <QueryProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </QueryProvider>
+        </StoreProvider>
       </body>
     </html>
   );
