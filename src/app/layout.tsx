@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} grid min-h-screen grid-rows-[80px_1fr_auto]`}
+      >
         <QueryProvider>
           <Header />
           <main>{children}</main>
