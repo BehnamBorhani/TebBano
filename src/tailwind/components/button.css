@@ -45,7 +45,7 @@
     }
 
     &.btn-neutral {
-      @apply text-neutral;
+      @apply text-neutral-400;
 
       &:active {
         @apply text-neutral-700;
@@ -524,15 +524,6 @@
     }
   }
 
-  &-link {
-    @apply h-auto !border-transparent !bg-transparent px-1 text-blue !outline-none;
-    @media (hover: hover) {
-      &:hover {
-        @apply border-transparent bg-transparent underline;
-      }
-    }
-  }
-
   &[disabled],
   &:disabled {
     @apply pointer-events-none bg-neutral-50 text-neutral-400;
@@ -570,15 +561,15 @@
   &-square {
     @apply size-9 p-0;
 
-    &:where(.btn-xs) {
+    &.btn-xs {
       @apply size-5 p-0;
     }
 
-    &:where(.btn-sm) {
+    &.btn-sm {
       @apply size-7 p-0;
     }
 
-    &:where(.btn-lg) {
+    &.btn-lg {
       @apply size-12 p-0;
     }
   }

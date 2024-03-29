@@ -10,7 +10,7 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const BrandColors: Story = {
+export const PrimaryButtons: Story = {
   render: () => (
     <>
       <Button>Default</Button>
@@ -21,7 +21,35 @@ export const BrandColors: Story = {
       <Button color="info">Info</Button>
       <Button color="danger">Danger</Button>
       <Button color="warning">Warning</Button>
-      <Button isLink={true}>Link</Button>
+    </>
+  ),
+};
+
+export const SecondaryButtons: Story = {
+  render: () => (
+    <>
+      <Button variant="secondary">Default</Button>
+      <Button variant="secondary" color="neutral">
+        Neutral
+      </Button>
+      <Button variant="secondary" color="blue">
+        Blue
+      </Button>
+      <Button variant="secondary" color="yellow">
+        Yellow
+      </Button>
+      <Button variant="secondary" color="success">
+        success
+      </Button>
+      <Button variant="secondary" color="info">
+        Info
+      </Button>
+      <Button variant="secondary" color="danger">
+        Danger
+      </Button>
+      <Button variant="secondary" color="warning">
+        Warning
+      </Button>
     </>
   ),
 };
@@ -50,6 +78,52 @@ export const OutlineButtons: Story = {
       </Button>
       <Button variant="outline" color="warning">
         Warning
+      </Button>
+    </>
+  ),
+};
+
+export const TextButtons: Story = {
+  render: () => (
+    <>
+      <Button variant="text">Default</Button>
+      <Button variant="text" color="neutral">
+        Neutral
+      </Button>
+      <Button variant="text" color="blue">
+        Blue
+      </Button>
+      <Button variant="text" color="yellow">
+        Yellow
+      </Button>
+      <Button variant="text" color="success">
+        success
+      </Button>
+      <Button variant="text" color="info">
+        Info
+      </Button>
+      <Button variant="text" color="danger">
+        Danger
+      </Button>
+      <Button variant="text" color="warning">
+        Warning
+      </Button>
+    </>
+  ),
+};
+
+export const DisabledButton: Story = {
+  render: () => (
+    <>
+      <Button disabled>Primary Disabled Button</Button>
+      <Button variant="secondary" disabled>
+        Secondary Disabled Button
+      </Button>
+      <Button variant="outline" disabled>
+        Outline Disabled Button
+      </Button>
+      <Button variant="text" disabled>
+        Text Disabled Button
       </Button>
     </>
   ),
@@ -153,14 +227,6 @@ export const SquareButtons: Story = {
   ),
 };
 
-export const DisabledButton: Story = {
-  render: () => (
-    <>
-      <Button disabled>Disabled Button</Button>
-    </>
-  ),
-};
-
 export const IconButton: Story = {
   render: () => (
     <>
@@ -233,6 +299,57 @@ export const IconButton: Story = {
   ),
 };
 
+export const ButtonWithLoading: Story = {
+  render: () => (
+    <>
+      <Button color="blue" isLoading={true} loadingText="Loading"></Button>
+      <Button color="yellow" isLoading={true} loadingText="Loading"></Button>
+      <Button color="neutral" isLoading={true} loadingText="Loading"></Button>
+      <Button
+        color="info"
+        isLoading={true}
+        loadingType={"ring"}
+        loadingText="Loading"
+      ></Button>
+      <Button
+        color="warning"
+        variant="outline"
+        isLoading={true}
+        loadingType={"ring"}
+        loadingText="Loading"
+      ></Button>
+      <Button
+        color="danger"
+        variant="outline"
+        isLoading={true}
+        loadingType={"ring"}
+        loadingText="Loading"
+      ></Button>
+      <Button
+        color="success"
+        variant="outline"
+        isLoading={true}
+        loadingType={"ring"}
+        loadingText="Loading"
+      ></Button>
+    </>
+  ),
+};
+
 export const Tests: Story = {
+  argTypes: {
+    color: {
+      control: "select",
+      options: [
+        "blue",
+        "yellow",
+        "neutral",
+        "info",
+        "success",
+        "warning",
+        "danger",
+      ],
+    },
+  },
   render: (args) => <Button {...args}>Click here</Button>,
 };

@@ -1,4 +1,5 @@
 import { Button } from "./_component/button";
+import { Loading } from "./_component/loading";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         <Button variant="primary" color="blue" isLoading loadingText="لودینگ">
           Click Here
         </Button>
+        <Loading />
       </div>
     </>
   );

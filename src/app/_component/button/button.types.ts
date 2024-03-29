@@ -8,7 +8,6 @@ export type ButtonVariant = "primary" | "secondary" | "outline" | "text";
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   ComponentBase &
   LoadingBehavior & {
-    isLink?: boolean;
     animatedIcon?: boolean;
     shape?: ButtonShape;
     variant?: ButtonVariant;

@@ -4,3 +4,15 @@
 @import "../tailwind/components.css";
 
 @import "tailwindcss/utilities";
+
+.animated-icon {
+  & > * {
+    @apply transition-all;
+  }
+  &:hover {
+    @apply text-white;
+    & > * {
+      @apply -translate-x-2;
+    }
+  }
+}

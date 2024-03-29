@@ -1,3 +1,4 @@
+import { Loading } from "../loading";
 import { Size } from "../types/size.type";
 import { ButtonProps, ButtonShape } from "./button.types";
 import classNames from "classnames";
@@ -22,7 +23,6 @@ export const Button: React.FC<ButtonProps> = ({
   size = "normal",
   isDisabled = false,
   isLoading = false,
-  isLink = false,
   shape = "default",
   loadingType = "spinner",
   loadingText = "درحال ارسال درخواست ...",
@@ -35,7 +35,6 @@ export const Button: React.FC<ButtonProps> = ({
   const classes = classNames(
     "btn",
     className,
-    { "btn-link": isLink },
     { "animated-icon": animatedIcon },
     { "pointer-events-none opacity-90": isLoading },
     { [`btn-${color}`]: color },
@@ -46,6 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button type={type} disabled={isDisabled} {...rest} className={classes}>
+      {isLoading && <Loading type={loadingType} />}
       {isLoading ? loadingText : children}
     </button>
   );
