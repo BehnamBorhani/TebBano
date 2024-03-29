@@ -49,7 +49,7 @@ export const tailwindColors = {
     900: "#302203",
     950: "#181101",
   },
-  "yellow-content": "#FFFFFF",
+  "yellow-content": "#FFF",
   "yellow-focus": generateDarkenColorFrom("#F4B735"),
   neutral: {
     50: "#F2F2F2",
@@ -79,7 +79,8 @@ export const tailwindColors = {
     900: "#000933",
     950: "#00041A",
   },
-  "info-content": generateForegroundColorFrom("#0025DD"),
+  "info-content": "#FFF",
+  "info-focus": generateDarkenColorFrom("#0025DD"),
   success: {
     50: "#E5FFEA",
     100: "#CCFFD5",
@@ -93,7 +94,8 @@ export const tailwindColors = {
     900: "#003309",
     950: "#001A04",
   },
-  "success-content": generateForegroundColorFrom("#00AE1D"),
+  "success-content": "#FFF",
+  "success-focus": generateDarkenColorFrom("#00AE1D"),
   warning: {
     50: "#FCFAE9",
     100: "#F8F5D3",
@@ -107,7 +109,8 @@ export const tailwindColors = {
     900: "#2C2907",
     950: "#161403",
   },
-  "warning-content": generateForegroundColorFrom("#E0CE2C"),
+  "warning-content": "#FFF",
+  "warning-focus": generateDarkenColorFrom("#E0CE2C"),
   danger: {
     50: "#FEE6EB",
     100: "#FDCED7",
@@ -121,14 +124,15 @@ export const tailwindColors = {
     900: "#31020B",
     950: "#190105",
   },
-  "danger-content": generateForegroundColorFrom("#E00930"),
+  "danger-content": "#FFF",
+  "danger-focus": generateDarkenColorFrom("#E00930"),
 };
 
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    colors: tailwindColors,
     extend: {
-      colors: tailwindColors,
       container: {
         center: true,
       },
