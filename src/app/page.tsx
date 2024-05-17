@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import { Mousewheel, Pagination } from "swiper/modules";
 import { Landing } from "./_component/landing";
 import Blog from "./(blogs)/blog/page";
+import Hero from "./_component/hero/page";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           <Landing />
         </SwiperSlide>
         <SwiperSlide>
-          <Blog />
+          <Hero />
         </SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>

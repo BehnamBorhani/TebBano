@@ -170,6 +170,7 @@ const config: Config = {
       },
       backgroundImage: {
         landing: "url('/images/landing.jpg')",
+        'hero-circle': "url('/images/hero-circle.png')",
       },
       fontFamily: {
         roboto: "var(--font-roboto)",
