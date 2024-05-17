@@ -21,6 +21,29 @@ export const tailwindColors = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
+  primary: {
+    DEFAULT: "#E1E2E6",
+    200: "#D1D1D2",
+    300: "#B4B4B4",
+  },
+  secondary: {
+    DEFAULT: "#B4BEC7",
+    200: "#A5AEB6",
+    300: "#90979E",
+  },
+  accent: {
+    DEFAULT: "#345065",
+    200: "#2C4355",
+    300: "#243745",
+  },
+  gray: {
+    DEFAULT: "#E7E7E7",
+    200: "#BDBDBD",
+    300: "#929292",
+    400: "#626262",
+    500: "#363636",
+    600: "#171717",
+  },
   blue: {
     50: "#E7EEFE",
     100: "#CFDDFC",
@@ -49,7 +72,7 @@ export const tailwindColors = {
     900: "#302203",
     950: "#181101",
   },
-  "yellow-content": "#FFFFFF",
+  "yellow-content": "#FFF",
   "yellow-focus": generateDarkenColorFrom("#F4B735"),
   neutral: {
     50: "#F2F2F2",
@@ -79,7 +102,8 @@ export const tailwindColors = {
     900: "#000933",
     950: "#00041A",
   },
-  "info-content": generateForegroundColorFrom("#0025DD"),
+  "info-content": "#FFF",
+  "info-focus": generateDarkenColorFrom("#0025DD"),
   success: {
     50: "#E5FFEA",
     100: "#CCFFD5",
@@ -93,7 +117,8 @@ export const tailwindColors = {
     900: "#003309",
     950: "#001A04",
   },
-  "success-content": generateForegroundColorFrom("#00AE1D"),
+  "success-content": "#FFF",
+  "success-focus": generateDarkenColorFrom("#00AE1D"),
   warning: {
     50: "#FCFAE9",
     100: "#F8F5D3",
@@ -107,7 +132,8 @@ export const tailwindColors = {
     900: "#2C2907",
     950: "#161403",
   },
-  "warning-content": generateForegroundColorFrom("#E0CE2C"),
+  "warning-content": "#FFF",
+  "warning-focus": generateDarkenColorFrom("#E0CE2C"),
   danger: {
     50: "#FEE6EB",
     100: "#FDCED7",
@@ -121,25 +147,41 @@ export const tailwindColors = {
     900: "#31020B",
     950: "#190105",
   },
-  "danger-content": generateForegroundColorFrom("#E00930"),
+  "danger-content": "#FFF",
+  "danger-focus": generateDarkenColorFrom("#E00930"),
 };
 
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: tailwindColors,
       container: {
         center: true,
       },
+      colors: tailwindColors,
       boxShadow: {
         sm: "0px 2px 4px 0px rgba(0, 0, 0, 0.12)",
         DEFAULT: "0px 4px 8px 0px rgba(0, 0, 0, 0.10)",
         md: "0px 6px 12px 0px rgba(0, 0, 0, 0.10)",
         lg: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
       },
+      dropShadow: {
+        xl: "7px 0px 5.5px 0px rgba(0, 0, 0,0.25)",
+      },
+      backgroundImage: {
+        landing: "url('/images/landing.jpg')",
+        'hero-circle': "url('/images/hero-circle.png')",
+      },
+      fontFamily: {
+        roboto: "var(--font-roboto)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "&>*");
+      addVariant("child-hover", "&>*:hover");
+    },
+  ],
 };
 export default config;

@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Serif } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/providers/react-query-provider";
 import { Header } from "./_component/header";
 import { Footer } from "./_component/footer";
+import StoreProvider from "@/providers/redux-store-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Serif({
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
-  title: "درسمن، شتاب‌دهنده شما برای ورود به بازار کار برنامه نویسی",
-  description:
-    "آکادمی آنلاین درسمن همانند پلی می باشد برای متخصص شدن در برنامه نویسی، ما به شما تضمین خواهیم داد که بالاترین کیفیت از آموزش برنامه نویسی را تجربه خواهید کرد.",
-  keywords: "درسمن-آکادمی آنلاین درسمن-سایت درسمن - آکادمی آنلاین",
+  title: "Crystal Flow",
+  description: "Discover your phone with one click",
+  keywords: "hack - phone - phone number - data",
   icons: "/images/favicon.png",
 };
 
@@ -21,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={inter.className}>
-        <QueryProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </QueryProvider>
+    <html lang="en" dir="ltr">
+      <body className={`${roboto.variable} font-roboto`}>
+        <StoreProvider>
+          <QueryProvider>
+            <Header />
+            {children}
+            {/* <Footer /> */}
+          </QueryProvider>
+        </StoreProvider>
       </body>
     </html>
   );
