@@ -21,6 +21,29 @@ export const tailwindColors = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
+  primary: {
+    DEFAULT: "#E1E2E6",
+    200: "#D1D1D2",
+    300: "#B4B4B4",
+  },
+  secondary: {
+    DEFAULT: "#B4BEC7",
+    200: "#A5AEB6",
+    300: "#90979E",
+  },
+  accent: {
+    DEFAULT: "#345065",
+    200: "#2C4355",
+    300: "#243745",
+  },
+  gray: {
+    DEFAULT: "#E7E7E7",
+    200: "#BDBDBD",
+    300: "#929292",
+    400: "#626262",
+    500: "#363636",
+    600: "#171717",
+  },
   blue: {
     50: "#E7EEFE",
     100: "#CFDDFC",
@@ -131,17 +154,26 @@ export const tailwindColors = {
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: tailwindColors,
+    container: {
+      center: true,
+    },
     extend: {
-      container: {
-        center: true,
-      },
+      colors: tailwindColors,
       boxShadow: {
         sm: "0px 2px 4px 0px rgba(0, 0, 0, 0.12)",
         DEFAULT: "0px 4px 8px 0px rgba(0, 0, 0, 0.10)",
         md: "0px 6px 12px 0px rgba(0, 0, 0, 0.10)",
         lg: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
       },
+      dropShadow: {
+        xl: '7px 0px 5.5px 0px rgba(0, 0, 0,0.25)'
+      },
+      backgroundImage: {
+        landing: "url('/images/landing.jpg')",
+      },
+      fontFamily: {
+        roboto: 'var(--font-roboto)'
+      }
     },
   },
   plugins: [],
