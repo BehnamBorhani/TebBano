@@ -8,9 +8,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Mousewheel, Pagination } from "swiper/modules";
+import Hero from "./_component/hero/hero";
 import { Landing } from "./_component/landing";
-import Blog from "./(blogs)/blog/page";
-import Hero from "./_component/hero/page";
 
 export default function Home() {
   return (

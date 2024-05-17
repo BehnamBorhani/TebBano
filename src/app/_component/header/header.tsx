@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
           className=""
         />
 
-        <nav className="bg-gray-50 child:text-accent relative flex h-[60px] w-[700px] items-center justify-center gap-24 rounded-[50px] py-5 text-xl font-medium">
+        <nav className="bg-gray-50 text-accent relative flex h-[60px] w-[700px] items-center justify-center gap-24 rounded-[50px] py-5 text-xl font-medium">
           <Link href="/" className={`${pathname === "/" && "active"}`}>
             Home
           </Link>

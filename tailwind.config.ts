@@ -170,7 +170,7 @@ const config: Config = {
       },
       backgroundImage: {
         landing: "url('/images/landing.jpg')",
-        'hero-circle': "url('/images/hero-circle.png')",
+        "hero-circle": "url('/images/hero-circle.png')",
       },
       fontFamily: {
         roboto: "var(--font-roboto)",
@@ -178,10 +178,10 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addVariant }) {
+    /* function ({ addVariant }) {
       addVariant("child", "&>*");
       addVariant("child-hover", "&>*:hover");
-    },
+    }, */
   ],
 };
 export default config;
