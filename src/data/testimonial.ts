@@ -1,6 +1,5 @@
-import { Testimonial } from "@/types/testimonial.type";
 
-export const testimonials: Testimonial[] = [
+export const testimonials = [
   {
     image: "/images/testimonial/one.jpg",
     name: "محمدرضا احمدی",

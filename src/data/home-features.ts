@@ -1,4 +1,4 @@
-export const homeFeatures: Feature[] = [
+export const homeFeatures = [
   {
     icon: "/images/guaranteed.svg",
     title: "دوره های تضمین شده",
