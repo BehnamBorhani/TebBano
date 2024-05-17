@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} font-roboto`}>
         <StoreProvider>
           <QueryProvider>
-            {/* <Header /> */}
+            <Header />
             {children}
             {/* <Footer /> */}
           </QueryProvider>

@@ -154,10 +154,10 @@ export const tailwindColors = {
 const config: Config = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    container: {
-      center: true,
-    },
     extend: {
+      container: {
+        center: true,
+      },
       colors: tailwindColors,
       boxShadow: {
         sm: "0px 2px 4px 0px rgba(0, 0, 0, 0.12)",
@@ -166,16 +166,21 @@ const config: Config = {
         lg: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
       },
       dropShadow: {
-        xl: '7px 0px 5.5px 0px rgba(0, 0, 0,0.25)'
+        xl: "7px 0px 5.5px 0px rgba(0, 0, 0,0.25)",
       },
       backgroundImage: {
         landing: "url('/images/landing.jpg')",
       },
       fontFamily: {
-        roboto: 'var(--font-roboto)'
-      }
+        roboto: "var(--font-roboto)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "&>*");
+      addVariant("child-hover", "&>*:hover");
+    },
+  ],
 };
 export default config;
