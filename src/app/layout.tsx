@@ -14,9 +14,10 @@ const roboto = Roboto_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Crystal Flow",
-  description: "Discover your phone with one click",
-  keywords: "hack - phone - phone number - data",
+  title: "پیامک ناشناس",
+  description: "حرف دلت رو راحت بهش بزن!",
+  keywords:
+    "ناشناس - phone - phone number - data - شماره - شماره موبایل - پیامک - sms",
   icons: "/images/favicon.png",
 };
 
@@ -26,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr">
-      <body className={`${roboto.variable} font-roboto`}>
+    <html lang="fa" dir="rtl">
+      <body className={`${roboto.variable} bg-six-100 font-roboto`}>
         <StoreProvider>
           <QueryProvider>
             <Header />
