@@ -34,14 +34,6 @@
     @apply text-blue;
   }
 
-  &-yellow {
-    @apply text-yellow;
-  }
-
-  &-info {
-    @apply text-info;
-  }
-
   &-success {
     @apply text-success;
   }

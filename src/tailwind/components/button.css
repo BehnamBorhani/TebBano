@@ -26,60 +26,6 @@
       }
     }
 
-    &.btn-yellow {
-      @apply text-yellow;
-
-      &:active {
-        @apply text-yellow-700;
-      }
-
-      &:focus {
-        @apply border-2 border-yellow-200 text-yellow;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          @apply text-yellow-300;
-        }
-      }
-    }
-
-    &.btn-neutral {
-      @apply text-neutral-400;
-
-      &:active {
-        @apply text-neutral-700;
-      }
-
-      &:focus {
-        @apply border-2 border-neutral-200 text-neutral;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          @apply text-neutral-300;
-        }
-      }
-    }
-
-    &.btn-info {
-      @apply text-info;
-
-      &:active {
-        @apply text-info-700;
-      }
-
-      &:focus {
-        @apply border-2 border-info-200 text-info;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          @apply text-info-300;
-        }
-      }
-    }
-
     &.btn-success {
       @apply text-success;
 
@@ -159,60 +105,6 @@
       }
     }
 
-    &.btn-yellow {
-      @apply bg-yellow text-yellow-content;
-
-      @media (hover: hover) {
-        &:hover {
-          @apply bg-yellow-300;
-        }
-      }
-
-      &:active {
-        @apply bg-yellow-600;
-      }
-
-      &:focus {
-        @apply border-2 border-yellow-200 bg-yellow;
-      }
-    }
-
-    &.btn-neutral {
-      @apply bg-neutral-200 text-neutral-content;
-
-      @media (hover: hover) {
-        &:hover {
-          @apply bg-neutral-100;
-        }
-      }
-
-      &:active {
-        @apply bg-neutral-400 text-neutral;
-      }
-
-      &:focus {
-        @apply border-2 border-neutral-200 bg-neutral text-neutral-content;
-      }
-    }
-
-    &.btn-info {
-      @apply bg-info text-info-content;
-
-      @media (hover: hover) {
-        &:hover {
-          @apply bg-info-400;
-        }
-      }
-
-      &:active {
-        @apply bg-info-600;
-      }
-
-      &:focus {
-        @apply border-2 border-info-300 bg-info;
-      }
-    }
-
     &.btn-success {
       @apply bg-success text-success-content;
 
@@ -284,60 +176,6 @@
 
       &:focus {
         @apply border-2 border-blue-200 text-blue;
-      }
-    }
-
-    &.btn-yellow {
-      @apply bg-yellow-50 text-yellow;
-
-      @media (hover: hover) {
-        &:hover {
-          @apply text-yellow-300;
-        }
-      }
-
-      &:active {
-        @apply text-yellow-700;
-      }
-
-      &:focus {
-        @apply border-2 border-yellow-200 text-yellow;
-      }
-    }
-
-    &.btn-neutral {
-      @apply bg-neutral-50 text-neutral-400;
-
-      @media (hover: hover) {
-        &:hover {
-          @apply text-neutral-300;
-        }
-      }
-
-      &:active {
-        @apply text-neutral-700;
-      }
-
-      &:focus {
-        @apply border-2 border-neutral-200 text-neutral-400;
-      }
-    }
-
-    &.btn-info {
-      @apply bg-info-50 text-info;
-
-      @media (hover: hover) {
-        &:hover {
-          @apply text-info-300;
-        }
-      }
-
-      &:active {
-        @apply text-info-700;
-      }
-
-      &:focus {
-        @apply border-2 border-info-200 text-info;
       }
     }
 
@@ -416,57 +254,6 @@
       }
     }
 
-    &.btn-yellow {
-      @apply border-yellow-300 bg-yellow-50 text-yellow;
-      @media (hover: hover) {
-        &:hover {
-          @apply text-yellow-300;
-        }
-      }
-
-      &:active {
-        @apply border-yellow-600 text-yellow-600;
-      }
-
-      &:focus {
-        @apply border-2 border-yellow-200 text-yellow;
-      }
-    }
-
-    &.btn-neutral {
-      @apply border-neutral-300 bg-neutral-50 text-neutral-400;
-      @media (hover: hover) {
-        &:hover {
-          @apply text-neutral-300;
-        }
-      }
-
-      &:active {
-        @apply border-neutral-600 text-neutral-600;
-      }
-
-      &:focus {
-        @apply border-2 border-neutral-200 text-neutral-400;
-      }
-    }
-
-    &.btn-info {
-      @apply border-info-300 bg-info-50 text-info;
-      @media (hover: hover) {
-        &:hover {
-          @apply text-info-300;
-        }
-      }
-
-      &:active {
-        @apply border-info-600 text-info-600;
-      }
-
-      &:focus {
-        @apply border-2 border-info-200 text-info;
-      }
-    }
-
     &.btn-success {
       @apply border-success-300 bg-success-50 text-success;
       @media (hover: hover) {
@@ -520,13 +307,13 @@
 
     &[disabled],
     &:disabled {
-      @apply border border-neutral-200;
+      @apply border border-black-100;
     }
   }
 
   &[disabled],
   &:disabled {
-    @apply pointer-events-none bg-neutral-50 text-neutral-400;
+    @apply pointer-events-none bg-white-100 text-black-200;
   }
 
   /* size and shape */
