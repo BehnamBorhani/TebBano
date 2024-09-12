@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./header.scss";
-import {Button} from "@/app/_component/button";
+import { Button } from "@/app/_component/button";
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
@@ -12,11 +12,11 @@ export const Header: React.FC = () => {
     <>
       <header className="container absolute left-0 right-0 top-4 z-50 flex items-center justify-between">
         <Image
-            src="/images/logo.svg"
-            alt="logo"
-            width={247}
-            height={99}
-            className=""
+          src="/images/logo.svg"
+          alt="logo"
+          width={247}
+          height={99}
+          className=""
         />
 
         <nav className="flex items-center justify-center gap-16 text-2xl font-bold">
@@ -31,7 +31,10 @@ export const Header: React.FC = () => {
             مراکز درمانی
           </Link>
 
-          <Link href="/blogs" className={`${pathname === "/blogs" && "active"}`}>
+          <Link
+            href="/blogs"
+            className={`${pathname === "/blogs" && "active"}`}
+          >
             مقالات
           </Link>
 
@@ -51,13 +54,17 @@ export const Header: React.FC = () => {
         </nav>
 
         <Link href="/signin">
-          <Button variant="outline" color="primary" className="mr-auto font-bold text-xl">
+          <Button
+            variant="outline"
+            color="primary"
+            className="mr-auto text-xl font-bold"
+          >
             ثبت‌نام / ورود
             <Image
-                src="/images/login.svg"
-                alt="logo"
-                width={35}
-                height={35}
+              src="/images/icons/login.svg"
+              alt="logo"
+              width={35}
+              height={35}
             />
           </Button>
         </Link>

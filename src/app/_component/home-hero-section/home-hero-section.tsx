@@ -1,8 +1,12 @@
 import React from "react";
+import { Avatar } from "@/app/_component/avatar";
+import { Button } from "@/app/_component/button";
+import Image from "next/image";
+import Link from "next/link";
 
 export const HomeHeroSection: React.FC = () => {
   return (
-    <section className="container mt-5 flex min-h-screen flex-col justify-center bg-hero-doctor bg-contain bg-center bg-no-repeat md:bg-left xl:mt-32">
+    <section className="container mt-5 flex min-h-screen flex-col justify-center gap-10 bg-hero-doctor bg-contain bg-center bg-no-repeat md:bg-left xl:mt-32">
       <div className="w-1/2 space-y-4">
         <h1 className="text-5xl font-bold">
           کنارتان هستیم با بهترین{" "}
@@ -13,6 +17,30 @@ export const HomeHeroSection: React.FC = () => {
           <br />
           تا بهترین خدمات را به شما ارایه دهیم.
         </p>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <div className="flex -space-x-6 space-x-reverse">
+          <Avatar src={"/images/doctors/female doctor 3.png"} size="large" />
+          <Avatar src={"/images/doctors/female doctor 2.png"} size="large" />
+          <Avatar src={"/images/doctors/female doctor 1.png"} size="large" />
+        </div>
+
+        <Link href="/signin">
+          <Button
+            variant="outline"
+            color="primary"
+            className="mr-auto text-xl font-bold"
+          >
+            <Image
+              src="/images/icons/support.svg"
+              alt="logo"
+              width={35}
+              height={35}
+            />
+            مشاوره آنلاین فوری
+          </Button>
+        </Link>
       </div>
     </section>
   );
