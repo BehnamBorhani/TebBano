@@ -11,13 +11,9 @@ export const Header: React.FC = () => {
   return (
     <>
       <header className="container absolute left-0 right-0 top-4 z-50 flex items-center justify-between">
-        <Image
-          src="/images/logo.svg"
-          alt="logo"
-          width={247}
-          height={99}
-          className=""
-        />
+        <Link href="/">
+          <Image src="/images/logo.svg" alt="logo" width={247} height={99} />
+        </Link>
 
         <nav className="flex items-center justify-center gap-16 text-2xl font-bold">
           <Link href="/" className={`${pathname === "/" && "active"}`}>
@@ -57,7 +53,7 @@ export const Header: React.FC = () => {
           <Button
             variant="outline"
             color="primary"
-            className="mr-auto text-xl font-bold"
+            className="mr-auto text-xl font-bold text-icon-500"
           >
             ثبت‌نام / ورود
             <Image

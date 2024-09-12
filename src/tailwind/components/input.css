@@ -1,0 +1,58 @@
+.input {
+  @apply h-12 flex-shrink px-4 text-sm leading-loose placeholder-black-800 placeholder-opacity-50;
+  @apply rounded-lg border border-black-300 bg-transparent text-black-900;
+
+  &:focus {
+    @apply outline outline-2 outline-offset-2;
+  }
+
+  &-primary {
+    @apply border-primary;
+    &:focus {
+      @apply outline-primary;
+    }
+  }
+
+  &-success {
+    @apply border-success;
+    &:focus {
+      @apply outline-success;
+    }
+  }
+
+  &-warning {
+    @apply border-warning;
+    &:focus {
+      @apply outline-warning;
+    }
+  }
+
+  &-danger {
+    @apply border-danger;
+    &:focus {
+      @apply outline-danger;
+    }
+  }
+
+  &-xs {
+    @apply h-6 px-2 text-xs leading-relaxed;
+  }
+
+  &-md {
+    @apply h-12 px-4 text-sm leading-loose;
+  }
+
+  &-lg {
+    @apply h-16 px-6 text-lg leading-loose;
+  }
+
+  &-sm {
+    @apply h-8 px-3 text-sm leading-8;
+  }
+
+  &-disabled,
+  &:disabled,
+  &[disabled] {
+    @apply cursor-not-allowed border-black-800 bg-black-800 text-opacity-20 placeholder-black-400 placeholder-opacity-20;
+  }
+}

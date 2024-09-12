@@ -3,10 +3,11 @@ import { Avatar } from "@/app/_component/avatar";
 import { Button } from "@/app/_component/button";
 import Image from "next/image";
 import Link from "next/link";
+import { SearchBox } from "../search-box";
 
 export const HomeHeroSection: React.FC = () => {
   return (
-    <section className="container mt-5 flex min-h-screen flex-col justify-center gap-10 bg-hero-doctor bg-contain bg-center bg-no-repeat md:bg-left xl:mt-32">
+    <section className="container mt-5 flex min-h-screen flex-col justify-center gap-16 bg-hero-doctor bg-contain bg-center bg-no-repeat md:bg-left xl:mt-32">
       <div className="w-1/2 space-y-4">
         <h1 className="text-5xl font-bold">
           کنارتان هستیم با بهترین{" "}
@@ -17,6 +18,10 @@ export const HomeHeroSection: React.FC = () => {
           <br />
           تا بهترین خدمات را به شما ارایه دهیم.
         </p>
+      </div>
+
+      <div className="h-16 w-1/2">
+        <SearchBox />
       </div>
 
       <div className="flex items-center gap-4">
@@ -30,7 +35,7 @@ export const HomeHeroSection: React.FC = () => {
           <Button
             variant="outline"
             color="primary"
-            className="mr-auto text-xl font-bold"
+            className="mr-auto text-xl font-bold text-icon-500"
           >
             <Image
               src="/images/icons/support.svg"
