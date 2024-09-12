@@ -20,6 +20,25 @@ const generateForegroundColorFrom = (
 export const tailwindColors = {
   current: "currentColor",
   transparent: "transparent",
+  icon: {
+    300: "#7774BA",
+    500: "#373299",
+    DEFAULT: "#373299",
+    700: "#252268",
+    900: "#141237",
+  },
+  "icon-content": "#FFFFFF",
+  "icon-focus": generateDarkenColorFrom("#373299"),
+  primary: {
+    300: "#9797B9",
+    400: "#7E7EA8",
+    500: "#666698",
+    DEFAULT: "#666698",
+    700: "#454567",
+    900: "#252537",
+  },
+  "primary-content": "#FFFFFF",
+  "primary-focus": generateDarkenColorFrom("#666698"),
   blue: {
     50: "#E6F6FF",
     100: "#B0E3FE",
@@ -121,12 +140,16 @@ const config: Config = {
       dropShadow: {
         xl: "7px 0px 5.5px 0px rgba(0, 0, 0,0.25)",
       },
+      borderRadius: {
+        "4xl": "50px"
+      },
       backgroundImage: {
         landing: "url('/images/landing.jpg')",
         "hero-circle": "url('/images/hero-circle.png')",
       },
       fontFamily: {
         roboto: "var(--font-roboto)",
+        dana: "var(--font-dana)",
       },
     },
   },

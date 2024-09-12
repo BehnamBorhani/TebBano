@@ -1,6 +1,6 @@
 .btn {
   @apply inline-flex items-center justify-center text-center transition duration-100 ease-in-out;
-  @apply select-none gap-1 rounded border border-transparent px-4 py-2 no-underline;
+  @apply select-none gap-1 rounded-4xl border border-transparent px-4 py-2 no-underline;
   &:active:hover,
   &:active:focus {
     transform: scale(0.97);
@@ -236,6 +236,23 @@
 
   &-outline {
     @apply border;
+
+    &.btn-primary {
+      @apply border-icon-500 bg-white-50 text-icon-500;
+      @media (hover: hover) {
+        &:hover {
+          @apply text-icon-900;
+        }
+      }
+
+      &:active {
+        @apply border-blue-700 text-blue-700;
+      }
+
+      &:focus {
+        @apply border-2 border-blue-200 text-blue;
+      }
+    }
 
     &.btn-blue {
       @apply border-blue-300 bg-blue-50 text-blue;

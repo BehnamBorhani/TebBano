@@ -1,4 +1,5 @@
 export type Color =
+  | "primary"
   | "blue"
   | "yellow"
   | "neutral"

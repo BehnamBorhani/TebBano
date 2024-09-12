@@ -1,7 +1,7 @@
 nav a.active {
-  @apply relative text-blue-600;
+  @apply relative text-icon-500;
   &::after {
     content: "";
-    @apply absolute -bottom-1 block h-1 w-full rounded bg-blue-700;
+    @apply absolute -bottom-1 block h-1 w-full rounded bg-icon-500;
   }
 }
