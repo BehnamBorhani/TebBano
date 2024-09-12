@@ -53,6 +53,36 @@ export const tailwindColors = {
   },
   "blue-content": "#FFFFFF",
   "blue-focus": generateDarkenColorFrom("#3571F4"),
+  third: {
+    50: "#EEE4DD",
+    100: "#E9DCD3",
+    200: "#DFCCC0",
+    300: "#D6BCAC",
+    400: "#CCAD99",
+    500: "#C29D85",
+    DEFAULT: "#C29D85",
+    600: "#A38470",
+    700: "#846B5A",
+    800: "#655245",
+    900: "#463930",
+  },
+  "third-content": "#FFFFFF",
+  "third-focus": generateDarkenColorFrom("#C29D85"),
+  mayBe: {
+    50: "#F3F4F5",
+    100: "#EFF1F2",
+    200: "#E8EAEC",
+    300: "#E1E4E6",
+    400: "#DADDE0",
+    500: "#D3D7DA",
+    DEFAULT: "#D3D7DA",
+    600: "#B1B5B7",
+    700: "#8F9294",
+    800: "#6E7071",
+    900: "#4C4D4E",
+  },
+  "mayBe-content": "#FFFFFF",
+  "mayBe-focus": generateDarkenColorFrom("#D3D7DA"),
   white: {
     50: "#FFFFFF",
     100: "#FDFDFD",
@@ -141,23 +171,33 @@ const config: Config = {
         xl: "7px 0px 5.5px 0px rgba(0, 0, 0,0.25)",
       },
       borderRadius: {
-        "4xl": "50px"
+        "4xl": "50px",
       },
       backgroundImage: {
-        landing: "url('/images/landing.jpg')",
+        "hero-doctor": "url('/images/hero-doctor.png')",
         "hero-circle": "url('/images/hero-circle.png')",
       },
       fontFamily: {
         roboto: "var(--font-roboto)",
-        dana: "var(--font-dana)",
+        yekan: ["var(--font-yekan)", "sans-serif"],
+      },
+      fontWeight: {
+        thin: "100",
+        light: "200",
+        regular: "300",
+        medium: "400",
+        bold: "500",
+        extraBold: "600",
+        black: "700",
+        extraBlack: "800",
       },
     },
   },
   plugins: [
     /* function ({ addVariant }) {
-      addVariant("child", "&>*");
-      addVariant("child-hover", "&>*:hover");
-    }, */
+                          addVariant("child", "&>*");
+                          addVariant("child-hover", "&>*:hover");
+                        }, */
   ],
 };
 export default config;

@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header className="container absolute left-0 right-0 top-7 z-50 flex items-center justify-between">
+      <header className="container absolute left-0 right-0 top-4 z-50 flex items-center justify-between">
         <Image
             src="/images/logo.svg"
             alt="logo"

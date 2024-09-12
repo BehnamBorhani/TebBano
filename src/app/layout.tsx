@@ -3,10 +3,10 @@ import { Roboto_Serif } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/providers/react-query-provider";
 import { Header } from "./_component/header";
-import { Footer } from "./_component/footer";
 import StoreProvider from "@/providers/redux-store-provider";
 import Script from "next/script";
 import localFont from "next/font/local";
+import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 
 const roboto = Roboto_Serif({
   display: "swap",
@@ -15,25 +15,50 @@ const roboto = Roboto_Serif({
   variable: "--font-roboto",
 });
 
-const dana = localFont({
+const iranYekan: NextFontWithVariable = localFont({
   src: [
     {
-      path: "../../public/fonts/dana/woff2/DanaFaNum-DemiBold.woff2",
+      path: "../../public/fonts/IRANYekan/IRANYekanThin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IRANYekan/IRANYekanLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IRANYekan/IRANYekanRegular.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/dana/woff2/DanaFaNum-DemiBold.woff2",
+      path: "../../public/fonts/IRANYekan/IRANYekanMedium.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IRANYekan/IRANYekanBold.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/dana/woff2/DanaFaNum-DemiBold.woff2",
+      path: "../../public/fonts/IRANYekan/IRANYekanExtraBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/IRANYekan/IRANYekanBlack.ttf",
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../../public/fonts/IRANYekan/IRANYekanExtraBlack.ttf",
+      weight: "800",
+      style: "normal",
+    },
   ],
-  variable: "--font-dana",
+  variable: "--font-yekan",
   display: "swap",
 });
 
@@ -51,8 +76,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={`${roboto.variable} ${dana.variable} bg-[#E6E6EE] font-dana`}>
+    <html
+      lang="fa"
+      dir="rtl"
+      className={`${roboto.variable} ${iranYekan.variable}`}
+    >
+      <body
+        className={`font-yekan grid min-h-screen grid-rows-[80px_1fr_auto] bg-[#E6E6EE]`}
+      >
         <StoreProvider>
           <QueryProvider>
             <Header />
