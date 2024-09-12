@@ -1,0 +1,27 @@
+.avatar {
+  @apply flex aspect-square items-center justify-center overflow-hidden rounded-full border-2 border-icon-500 bg-white-50;
+
+  & > svg {
+    @apply opacity-40;
+  }
+
+  &-primary {
+    @apply border-icon-500;
+  }
+
+  &-success {
+    @apply border-success;
+  }
+
+  &-warning {
+    @apply border-warning;
+  }
+
+  &-danger {
+    @apply border-danger;
+  }
+
+  img {
+    @apply h-full w-full object-cover;
+  }
+}
