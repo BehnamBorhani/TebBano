@@ -5,6 +5,8 @@ import QueryProvider from "@/providers/react-query-provider";
 import { Header } from "./_component/header";
 import { Footer } from "./_component/footer";
 import StoreProvider from "@/providers/redux-store-provider";
+import Script from "next/script";
+import localFont from "next/font/local";
 
 const roboto = Roboto_Serif({
   display: "swap",
@@ -13,9 +15,32 @@ const roboto = Roboto_Serif({
   variable: "--font-roboto",
 });
 
+const dana = localFont({
+  src: [
+    {
+      path: "../../public/fonts/dana/woff2/DanaFaNum-DemiBold.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/dana/woff2/DanaFaNum-DemiBold.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/dana/woff2/DanaFaNum-DemiBold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-dana",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "دکتر رزرو",
-  description: "دکتر رزرو دکتر آنلاین و نوبت دهی سریع از بهترین پزشکان ، درمانگاه ها ، کلینیک ها و بیمارستان های کشور.از طریق این سایت و یا اپلیکیشن دکتر رزرو اینترنتی با جستجوی دکتر مورد نظر ، مشاوره تلفنی و یا نوبت بگیرید.",
+  title: "TebBano",
+  description:
+    "دکتر رزرو دکتر آنلاین و نوبت دهی سریع از بهترین پزشکان ، درمانگاه ها ، کلینیک ها و بیمارستان های کشور.از طریق این سایت و یا اپلیکیشن طبانو اینترنتی با جستجوی دکتر مورد نظر ، مشاوره تلفنی و یا نوبت بگیرید.",
   keywords: "دکتر - رزرو - نوبت - نوبت آنلاین - متخصص - وقت - پزشک",
   icons: "/images/favicon.png",
 };
@@ -27,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={`${roboto.variable} bg-six-100 font-roboto`}>
+      <body className={`${roboto.variable} ${dana.variable} bg-[#E6E6EE] font-dana`}>
         <StoreProvider>
           <QueryProvider>
             <Header />
@@ -35,6 +60,14 @@ export default function RootLayout({
             {/* <Footer /> */}
           </QueryProvider>
         </StoreProvider>
+
+        <Script
+          id="goftino-widget"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(){var i="aVIRWx",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();`,
+          }}
+        />
       </body>
     </html>
   );
