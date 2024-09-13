@@ -7,8 +7,8 @@ import { SearchBox } from "../search-box";
 
 export const HomeHeroSection: React.FC = () => {
   return (
-    <section className="container mt-5 flex min-h-screen flex-col justify-center gap-16 bg-hero-doctor bg-contain bg-center bg-no-repeat md:bg-left xl:mt-32">
-      <div className="w-1/2 space-y-4">
+    <section className="container relative mt-5 flex min-h-screen flex-col justify-center gap-16 bg-hero-doctor bg-contain bg-center bg-no-repeat md:bg-left xl:mt-32">
+      <div className="hidden w-full space-y-4 md:block md:w-1/2">
         <h1 className="text-5xl font-bold">
           کنارتان هستیم با بهترین{" "}
           <span className="text-third-600">متخصصان</span>
@@ -20,11 +20,11 @@ export const HomeHeroSection: React.FC = () => {
         </p>
       </div>
 
-      <div className="h-16 w-1/2">
+      <div className="absolute bottom-4 h-16 w-full md:relative md:w-1/2">
         <SearchBox />
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="hidden items-center gap-4 md:flex">
         <div className="flex -space-x-6 space-x-reverse">
           <Avatar src={"/images/doctors/female doctor 3.png"} size="large" />
           <Avatar src={"/images/doctors/female doctor 2.png"} size="large" />

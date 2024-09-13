@@ -65,7 +65,7 @@ const iranYekan: NextFontWithVariable = localFont({
 export const metadata: Metadata = {
   title: "TebBano",
   description:
-    "دکتر رزرو دکتر آنلاین و نوبت دهی سریع از بهترین پزشکان ، درمانگاه ها ، کلینیک ها و بیمارستان های کشور.از طریق این سایت و یا اپلیکیشن طبانو اینترنتی با جستجوی دکتر مورد نظر ، مشاوره تلفنی و یا نوبت بگیرید.",
+    "طبانو دکتر آنلاین و نوبت دهی سریع از بهترین پزشکان ، درمانگاه ها ، کلینیک ها و بیمارستان های کشور.از طریق این سایت و یا اپلیکیشن طبانو اینترنتی با جستجوی دکتر مورد نظر ، مشاوره تلفنی و یا نوبت بگیرید.",
   keywords: "دکتر - رزرو - نوبت - نوبت آنلاین - متخصص - وقت - پزشک",
   icons: "/images/favicon.png",
 };
@@ -82,7 +82,7 @@ export default function RootLayout({
       className={`${roboto.variable} ${iranYekan.variable}`}
     >
       <body
-        className={`font-yekan grid min-h-screen grid-rows-[80px_1fr_auto] bg-[#E6E6EE]`}
+        className={`grid min-h-screen grid-rows-[80px_1fr_auto] bg-[#E6E6EE] font-yekan`}
       >
         <StoreProvider>
           <QueryProvider>

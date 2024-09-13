@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
           <Image src="/images/logo.svg" alt="logo" width={247} height={99} />
         </Link>
 
-        <nav className="flex items-center justify-center gap-16 text-2xl font-bold">
+        <nav className="hidden items-center justify-center gap-16 text-2xl font-bold md:flex">
           <Link href="/" className={`${pathname === "/" && "active"}`}>
             خانه
           </Link>
@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
           </Link>
         </nav>
 
-        <Link href="/signin">
+        <Link href="/signin" className="hidden md:inline-block">
           <Button
             variant="outline"
             color="primary"
