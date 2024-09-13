@@ -11,8 +11,21 @@ export const Header: React.FC = () => {
   return (
     <>
       <header className="container absolute left-0 right-0 top-4 z-50 flex items-center justify-between">
-        <Link href="/">
-          <Image src="/images/logo.svg" alt="logo" width={247} height={99} />
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo-icon.svg"
+            alt="logo"
+            width={100}
+            height={100}
+            className="size-24"
+          />
+          <Image
+            src="/images/brand-logo.png"
+            alt="logo"
+            width={138}
+            height={55}
+            className="hidden h-14 w-32 md:block"
+          />
         </Link>
 
         <nav className="hidden items-center justify-center gap-16 text-2xl font-bold md:flex">
