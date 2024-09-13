@@ -166,12 +166,14 @@ const config: Config = {
         DEFAULT: "0px 4px 8px 0px rgba(0, 0, 0, 0.10)",
         md: "0px 6px 12px 0px rgba(0, 0, 0, 0.10)",
         lg: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
+        xl: "-8px 8px 20.2px 4px rgba(0, 0, 0, 0.25)",
       },
       dropShadow: {
         xl: "7px 0px 5.5px 0px rgba(0, 0, 0,0.25)",
       },
       borderRadius: {
         "4xl": "50px",
+        "5xl": "100px",
       },
       backgroundImage: {
         "hero-doctor": "url('/images/hero-doctor.png')",
