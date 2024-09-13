@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.paziresh24.com",
       },
+      {
+        protocol: "https",
+        hostname: "apigw.paziresh24.com",
+      },
     ],
   },
 };
