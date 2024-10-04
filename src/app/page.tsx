@@ -2,6 +2,8 @@ import { HomeHeroSection } from "@/app/_component/home-hero-section";
 import { DoctorCardList } from "./(doctors)/_components/doctor-card-list";
 import { API_URL } from "@/configs/global";
 import { Doctor } from "./(doctors)/_types/doctor.model";
+import { homeFeatures } from "@/data/home-features";
+import HomeFeature from "./_component/home-feature/home-feature";
 
 async function getِDoctors(count: number): Promise<[]> {
   //   await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -23,10 +25,20 @@ export default async function Home() {
     <div>
       <HomeHeroSection />
 
-      <section className="min-h-screen rounded-t-3xl bg-white-50 pt-8 shadow-2xl md:rounded-t-5xl md:pt-20">
+      <section className="rounded-t-3xl bg-white-50 px-10 py-20 shadow-2xl md:rounded-t-5xl md:pt-20">
         <div className="container">
-          <h2 className="text-xl font-bold md:text-3xl">معرفی پزشکان</h2>
+          <h2 className="mb-5 text-xl font-bold md:text-3xl">معرفی پزشکان</h2>
           <DoctorCardList doctors={doctorsData} />
+        </div>
+      </section>
+
+      <section className="features mb-12 bg-third-50 py-12 lg:mb-36">
+        <div className="container">
+          <div className="flex flex-wrap items-center justify-between gap-y-11 lg:gap-x-11">
+            {homeFeatures.map((feature) => (
+              <HomeFeature key={feature.title} feature={feature} />
+            ))}
+          </div>
         </div>
       </section>
     </div>

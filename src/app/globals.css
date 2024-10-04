@@ -47,3 +47,35 @@ body {
 h1 {
   /*text-shadow: rgba(0, 0, 0, 0.25) 7px 0px 5.5px;*/
 }
+
+@layer components {
+  .features {
+    @apply relative;
+  }
+
+  .features::before,
+  .features::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-color: #d1d5db;
+  }
+
+  .features::after {
+    width: 1px;
+    height: calc(100% + 1.25rem);
+  }
+  .features::before {
+    height: 1px;
+    width: calc(100% - 2rem);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .features::before,
+    .features::after {
+      content: none;
+    }
+  }
+}
