@@ -14,20 +14,20 @@ async function getِDoctors(count: number): Promise<[]> {
     },
   );
   const data = await res.json();
-  return data.search.result;
+  return data.search.result.slice(0, count);
 }
 
 export default async function Home() {
-  const doctorsData: Doctor[] = await getِDoctors(4);
+  const doctorsData: Doctor[] = await getِDoctors(12);
 
   return (
-    <div>
+    <div className="bg-[#E6E6EE]">
       <HomeHeroSection />
 
       <section className="rounded-t-3xl bg-white-50 px-10 py-20 shadow-2xl md:rounded-t-5xl md:pt-20">
         <div className="container">
           <h2 className="mb-5 text-xl font-bold md:text-3xl">معرفی پزشکان</h2>
-          <DoctorCardList doctors={doctorsData} />
+          {/* <DoctorCardList doctors={doctorsData} /> */}
         </div>
       </section>
 

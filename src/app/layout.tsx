@@ -82,9 +82,7 @@ export default function RootLayout({
       dir="rtl"
       className={`${roboto.variable} ${iranYekan.variable}`}
     >
-      <body
-        className={`grid min-h-screen grid-rows-[80px_1fr_auto] bg-[#E6E6EE] font-yekan`}
-      >
+      <body className={`font-yekan`}>
         <StoreProvider>
           <QueryProvider>
             <NextUIProvider>
