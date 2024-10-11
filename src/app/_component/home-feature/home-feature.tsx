@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { MyButton } from "../button/MyButton";
 
 const HomeFeature = ({ feature }: { feature: Feature }) => {
   return (
@@ -17,6 +18,10 @@ const HomeFeature = ({ feature }: { feature: Feature }) => {
       <p className="hidden text-center text-xl lg:block">
         {feature.description}
       </p>
+
+      <MyButton color="primary" variant="bordered" radius="full">
+        {feature.action}
+      </MyButton>
     </div>
   );
 };

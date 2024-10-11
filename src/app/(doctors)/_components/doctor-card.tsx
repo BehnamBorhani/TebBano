@@ -2,7 +2,7 @@ import React from "react";
 import { Doctor } from "../_types/doctor.model";
 import { Avatar } from "@/app/_component/avatar";
 import Image from "next/image";
-import { Button } from "@/app/_component/button";
+import { MyButton } from "@/app/_component/button/MyButton";
 
 type DoctorCardProps = Doctor;
 
@@ -68,14 +68,15 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
 
         <hr />
 
-        <Button
-          variant="outline"
-          className="!border-third-500 !bg-transparent !text-third-500"
-          shape="full"
-          size="large"
+        <MyButton
+          color="third"
+          variant="bordered"
+          radius="full"
+          size="lg"
+          fullWidth
         >
           رزرو نوبت
-        </Button>
+        </MyButton>
       </div>
     </div>
   );

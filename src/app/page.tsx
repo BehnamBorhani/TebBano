@@ -6,7 +6,6 @@ import { homeFeatures } from "@/data/home-features";
 import HomeFeature from "./_component/home-feature/home-feature";
 
 async function getِDoctors(count: number): Promise<[]> {
-  //   await new Promise((resolve) => setTimeout(resolve, 5000));
   const res = await fetch(
     `${API_URL}/search/tehran?text=%D9%85%D8%AA%D8%AE%D8%B5%D8%B5+%D8%B2%D9%86%D8%A7%D9%86+%D9%88+%D8%B2%D8%A7%DB%8C%D9%85%D8%A7%D9%86`,
     {

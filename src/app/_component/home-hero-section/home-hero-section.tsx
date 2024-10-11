@@ -4,6 +4,7 @@ import { Button } from "@/app/_component/button";
 import Image from "next/image";
 import Link from "next/link";
 import { SearchBox } from "../search-box";
+import { MyButton } from "../button/MyButton";
 
 export const HomeHeroSection: React.FC = () => {
   return (
@@ -33,10 +34,12 @@ export const HomeHeroSection: React.FC = () => {
           </div>
 
           <Link href="https://www.goftino.com/c/aVIRWx" target="_blank">
-            <Button
-              variant="outline"
-              color="primary"
-              className="mr-auto text-xl font-bold text-icon-500"
+            <MyButton
+              variant="bordered"
+              color="icon"
+              radius="full"
+              size="lg"
+              className="mr-auto px-6 py-2.5 text-xl font-bold"
             >
               <Image
                 src="/images/icons/support.svg"
@@ -45,7 +48,7 @@ export const HomeHeroSection: React.FC = () => {
                 height={35}
               />
               مشاوره آنلاین فوری
-            </Button>
+            </MyButton>
           </Link>
         </div>
       </div>

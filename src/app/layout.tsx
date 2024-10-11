@@ -7,6 +7,7 @@ import StoreProvider from "@/providers/redux-store-provider";
 import Script from "next/script";
 import localFont from "next/font/local";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
+import { NextUIProvider } from "@nextui-org/react";
 
 const roboto = Roboto_Serif({
   display: "swap",
@@ -86,9 +87,11 @@ export default function RootLayout({
       >
         <StoreProvider>
           <QueryProvider>
-            <Header />
-            {children}
-            {/* <Footer /> */}
+            <NextUIProvider>
+              <Header />
+              {children}
+              {/* <Footer /> */}
+            </NextUIProvider>
           </QueryProvider>
         </StoreProvider>
 

@@ -1,3 +1,4 @@
+import { nextui } from "@nextui-org/react";
 import { colord, extend } from "colord";
 import mixPlugin from "colord/plugins/mix";
 import type { Config } from "tailwindcss";
@@ -154,7 +155,10 @@ export const tailwindColors = {
 };
 
 const config: Config = {
-  content: ["./src/app/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     colors: tailwindColors,
     extend: {
@@ -196,10 +200,27 @@ const config: Config = {
     },
   },
   plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            primary: {
+              300: "#9797B9",
+              400: "#7E7EA8",
+              500: "#666698",
+              DEFAULT: "#666698",
+              700: "#454567",
+              900: "#252537",
+            },
+          },
+        },
+      },
+    }),
     /* function ({ addVariant }) {
                           addVariant("child", "&>*");
                           addVariant("child-hover", "&>*:hover");
                         }, */
   ],
+  darkMode: "class",
 };
 export default config;
