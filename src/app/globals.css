@@ -71,6 +71,10 @@ h1 {
     width: calc(100% - 2rem);
   }
 
+  .bg-logo2 {
+    background: rgb(119, 116, 186) url('/images/bg-logo.png') no-repeat center;
+  }
+
   @media screen and (min-width: 1024px) {
     .features::before,
     .features::after {

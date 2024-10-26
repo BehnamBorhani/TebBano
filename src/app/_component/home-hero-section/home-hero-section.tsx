@@ -1,6 +1,5 @@
 import React from "react";
 import { Avatar } from "@/app/_component/avatar";
-import { Button } from "@/app/_component/button";
 import Image from "next/image";
 import Link from "next/link";
 import { SearchBox } from "../search-box";

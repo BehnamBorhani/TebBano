@@ -6,6 +6,8 @@ import { homeFeatures } from "@/data/home-features";
 import HomeFeature from "./_component/home-feature/home-feature";
 import { TestimonialList } from "./_component/testimonial/testimonial-list";
 import { testimonials } from "@/data/testimonial";
+import { MyButton } from "./_component/button/MyButton";
+import Image from "next/image";
 
 async function getِDoctors(count: number): Promise<[]> {
   const res = await fetch(
@@ -53,8 +55,44 @@ export default async function Home() {
         <p className="mb-20 mt-2 text-center text-lg">
           تو اینجا تنها نیستی. ببین هم‌مسیرهات نظرشون در مورد خدمات ما چیه
         </p>
-        
+
         <TestimonialList testimonials={testimonials} />
+      </section>
+
+      <section className="bg-white-50 text-white-50">
+        <div className="bg-logo2 z-20 flex items-center justify-center rounded-t-3xl py-20 shadow-2xl md:rounded-t-4xl">
+          <div className="container flex flex-col items-center justify-center gap-8 px-10 md:pt-10">
+            <h2 className="border-b-2 border-white-50 pb-4 text-5xl font-bold">
+              با ما در ارتباط باشید
+            </h2>
+            <p className="text-2xl">
+              مقاله های ماهانه ما باعث میشود شما درباره لایف استایل، آخرین اخبار
+              دنیای پزشکی و تلاش های ما برای بهبود دسترسی کاربران باخبر شوید
+            </p>
+            <div className="flex w-1/2 gap-4">
+              <MyButton
+                color="secondary"
+                radius="full"
+                size="lg"
+                className="mr-auto px-6 py-2.5 text-xl font-bold"
+              >
+                <Image
+                  src="/images/icons/send.svg"
+                  alt="send-icon"
+                  width={25}
+                  height={25}
+                />
+                ارسال
+              </MyButton>
+              <input
+                type="text"
+                className="flex-1 rounded-full px-6 py-2 text-mayBe-900"
+                placeholder="example@gmail.com"
+                dir="ltr"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

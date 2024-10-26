@@ -180,8 +180,12 @@ const config: Config = {
         "5xl": "100px",
       },
       backgroundImage: {
+        logo: "url('/images/bg-logo.png')",
         "hero-doctor": "url('/images/hero-doctor.png')",
         "hero-circle": "url('/images/hero-circle.png')",
+      },
+      backgroundSize: {
+        "50%": "50%",
       },
       fontFamily: {
         roboto: "var(--font-roboto)",
@@ -211,6 +215,13 @@ const config: Config = {
               DEFAULT: "#666698",
               700: "#454567",
               900: "#252537",
+            },
+            secondary: {
+              300: "#7774BA",
+              500: "#373299",
+              DEFAULT: "#373299",
+              700: "#252268",
+              900: "#141237",
             },
           },
         },
