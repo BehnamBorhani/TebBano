@@ -25,7 +25,7 @@ export default async function Home() {
   const doctorsData: Doctor[] = await getِDoctors(12);
 
   return (
-    <div className="bg-[#E6E6EE]">
+    <div className="bg-[#E6E6EE] pb-60">
       <HomeHeroSection />
 
       <section className="rounded-t-3xl bg-white-50 px-10 py-20 shadow-2xl md:rounded-t-5xl md:pt-20">

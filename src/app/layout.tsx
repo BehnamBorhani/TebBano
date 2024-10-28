@@ -8,6 +8,7 @@ import Script from "next/script";
 import localFont from "next/font/local";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { NextUIProvider } from "@nextui-org/react";
+import { Footer } from "./_component/footer";
 
 const roboto = Roboto_Serif({
   display: "swap",
@@ -86,9 +87,11 @@ export default function RootLayout({
         <StoreProvider>
           <QueryProvider>
             <NextUIProvider>
-              <Header />
-              {children}
-              {/* <Footer /> */}
+              <div className="relative">
+                <Header />
+                {children}
+                <Footer />
+              </div>
             </NextUIProvider>
           </QueryProvider>
         </StoreProvider>

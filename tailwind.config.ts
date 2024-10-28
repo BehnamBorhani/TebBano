@@ -227,10 +227,10 @@ const config: Config = {
         },
       },
     }),
-    /* function ({ addVariant }) {
-                          addVariant("child", "&>*");
-                          addVariant("child-hover", "&>*:hover");
-                        }, */
+    function ({ addVariant }) {
+      addVariant("child", "&>*");
+      addVariant("child-hover", "&>*:hover");
+    },
   ],
   darkMode: "class",
 };
