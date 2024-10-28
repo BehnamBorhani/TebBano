@@ -1,13 +1,13 @@
 import React from "react";
 import { Avatar } from "@/app/_component/avatar";
-import { Button } from "@/app/_component/button";
 import Image from "next/image";
 import Link from "next/link";
 import { SearchBox } from "../search-box";
+import { MyButton } from "../button/MyButton";
 
 export const HomeHeroSection: React.FC = () => {
   return (
-    <section className="container relative mt-24 flex h-fit flex-col-reverse md:flex-row md:justify-between">
+    <section className="container relative flex flex-col-reverse md:flex-row md:justify-between">
       <div className="title-container flex flex-col justify-center gap-16 xl:mt-32">
         <div className="hidden w-full space-y-4 md:block">
           <h1 className="text-5xl font-bold">
@@ -33,10 +33,12 @@ export const HomeHeroSection: React.FC = () => {
           </div>
 
           <Link href="https://www.goftino.com/c/aVIRWx" target="_blank">
-            <Button
-              variant="outline"
-              color="primary"
-              className="mr-auto text-xl font-bold text-icon-500"
+            <MyButton
+              variant="bordered"
+              color="icon"
+              radius="full"
+              size="lg"
+              className="mr-auto px-6 py-2.5 text-xl font-bold"
             >
               <Image
                 src="/images/icons/support.svg"
@@ -45,12 +47,12 @@ export const HomeHeroSection: React.FC = () => {
                 height={35}
               />
               مشاوره آنلاین فوری
-            </Button>
+            </MyButton>
           </Link>
         </div>
       </div>
 
-      <div className="hero-container -z-10">
+      <div className="hero-container">
         <Image
           src="/images/hero-doctor.png"
           alt="hero-doctor"

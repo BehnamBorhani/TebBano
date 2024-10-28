@@ -24,13 +24,12 @@ body {
 }
 
 body {
-  background: #eee;
   font-family:
     Helvetica Neue,
     Helvetica,
     Arial,
     sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   margin: 0;
   padding: 0;
@@ -42,23 +41,44 @@ body {
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 h1 {
   /*text-shadow: rgba(0, 0, 0, 0.25) 7px 0px 5.5px;*/
+}
+
+@layer components {
+  .features {
+    @apply relative;
+  }
+
+  .features::before,
+  .features::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-color: #d1d5db;
+  }
+
+  .features::after {
+    width: 1px;
+    height: calc(100% - 2rem);
+  }
+  .features::before {
+    height: 1px;
+    width: calc(100% - 2rem);
+  }
+
+  .bg-logo2 {
+    background: rgb(119, 116, 186) url('/images/bg-logo.png') no-repeat center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .features::before,
+    .features::after {
+      content: none;
+    }
+  }
 }
