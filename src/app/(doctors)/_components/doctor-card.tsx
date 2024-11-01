@@ -17,7 +17,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
 }) => {
   return (
     <div className="h-full w-full select-none overflow-hidden rounded-4xl bg-white-50 px-9 py-7 shadow-xl">
-      <div className="card-header flex gap-7">
+      <div className="card-header gap-7 md:flex">
         <Avatar src={`https://cdn.paziresh24.com/${image}`} />
         <div className="title">
           <h3 className="text-2xl font-bold text-icon-500">{display_name}</h3>
@@ -53,7 +53,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
           <h5 className="text-xl">سه شنبه 23خرداد - 10:30</h5>
         </div>
 
-        <div className="flex gap-2 pt-2">
+        <div className="hidden gap-2 pt-2 md:flex">
           <Image
             src="/images/icons/location.svg"
             alt="location-icon"

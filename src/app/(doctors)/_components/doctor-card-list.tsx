@@ -12,7 +12,8 @@ export const DoctorCardList = async ({ doctors }: { doctors: Doctor[] }) => {
   return (
     <Swiper
       modules={[Autoplay, FreeMode]}
-      slidesPerView={3}
+      slidesPerView={1}
+      spaceBetween={10}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,

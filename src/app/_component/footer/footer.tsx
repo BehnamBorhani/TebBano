@@ -7,9 +7,9 @@ export const Footer: React.FC = () => {
     <>
       <section className="absolute bottom-0 w-full bg-[#7774BA]">
         <div className="z-30 flex items-center justify-center rounded-t-3xl bg-white-50 pb-5 shadow-2xl md:rounded-t-4xl">
-          <div className="container items-center justify-center gap-8 px-10 md:flex md:py-10">
-            <div className="flex-1 space-y-2 pb-4">
-              <div className="flex items-center gap-1">
+          <div className="container items-center justify-center gap-16 px-10 md:flex md:py-10">
+            <div className="flex-1 space-y-2 py-4 md:pt-0">
+              <div className="flex items-center justify-center gap-1 md:justify-start">
                 <Image
                   src="/images/logo-icon.svg"
                   alt="logo"
@@ -25,34 +25,36 @@ export const Footer: React.FC = () => {
                   className="h-12 w-28"
                 />
               </div>
-              <p>
+              <p className="text-center md:text-right">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
                 استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است،
               </p>
             </div>
 
-            <div className="flex flex-1 items-center justify-between">
-              <div className="flex-1 space-y-6">
-                <span className="text-icon-300">دسترسی سریع</span>
-                <ul className="space-y-4">
-                  <li>درباره ما</li>
-                  <li>تماس با ما</li>
-                  <li>بلاگ ها</li>
-                </ul>
+            <div className="flex-[2] items-center justify-between md:flex">
+              <div className="flex flex-1 items-center justify-between text-center md:text-start">
+                <div className="flex-1 space-y-6">
+                  <span className="text-icon-300">دسترسی سریع</span>
+                  <ul className="space-y-4">
+                    <li>درباره ما</li>
+                    <li>تماس با ما</li>
+                    <li>بلاگ ها</li>
+                  </ul>
+                </div>
+
+                <div className="flex-1 space-y-6">
+                  <span className="text-icon-300">لینک های کمکی</span>
+                  <ul className="space-y-4">
+                    <li>درباره ما</li>
+                    <li>تماس با ما</li>
+                    <li>بلاگ ها</li>
+                  </ul>
+                </div>
               </div>
 
               <div className="flex-1 space-y-6">
-                <span className="text-icon-300">لینک های کمکی</span>
-                <ul className="space-y-4">
-                  <li>درباره ما</li>
-                  <li>تماس با ما</li>
-                  <li>بلاگ ها</li>
-                </ul>
-              </div>
-
-              <div className="flex-[2] space-y-6">
-                <span className="text-icon-300">جستجو</span>
+                <span className="hidden text-icon-300 md:block">جستجو</span>
                 <Input
                   type="text"
                   placeholder="جستجو براساس موضوع"
@@ -69,7 +71,7 @@ export const Footer: React.FC = () => {
                     />
                   }
                 />
-                <div className="child:cursor-pointer flex items-center gap-2">
+                <div className="flex items-center justify-end gap-6 child:cursor-pointer">
                   <a href="mailto:info@dejavureve.com">
                     <Image
                       src="/images/icons/mail.svg"

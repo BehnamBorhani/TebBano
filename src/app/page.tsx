@@ -25,7 +25,7 @@ export default async function Home() {
   const doctorsData: Doctor[] = await getِDoctors(12);
 
   return (
-    <div className="bg-[#E6E6EE] pb-60">
+    <div className="bg-[#E6E6EE] pb-[28rem] md:pb-60">
       <HomeHeroSection />
 
       <section className="rounded-t-3xl bg-white-50 px-10 py-20 shadow-2xl md:rounded-t-5xl md:pt-20">
@@ -61,15 +61,15 @@ export default async function Home() {
 
       <section className="bg-white-50 text-white-50">
         <div className="bg-logo2 z-20 flex items-center justify-center rounded-t-3xl py-20 shadow-2xl md:rounded-t-4xl">
-          <div className="container flex flex-col items-center justify-center gap-8 px-10 md:pt-10">
-            <h2 className="border-b-2 border-white-50 pb-4 text-5xl font-bold">
+          <div className="container flex flex-col items-center justify-center gap-4 px-10 md:gap-8 md:pt-10">
+            <h2 className="border-b-2 border-white-50 pb-4 text-2xl font-bold md:text-5xl">
               با ما در ارتباط باشید
             </h2>
-            <p className="text-2xl">
+            <p className="text-center text-lg font-light">
               مقاله های ماهانه ما باعث میشود شما درباره لایف استایل، آخرین اخبار
               دنیای پزشکی و تلاش های ما برای بهبود دسترسی کاربران باخبر شوید
             </p>
-            <div className="flex w-1/2 gap-4">
+            <div className="flex scale-90 gap-4 md:w-1/2 md:scale-100">
               <MyButton
                 color="secondary"
                 radius="full"
