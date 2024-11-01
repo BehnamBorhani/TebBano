@@ -2,6 +2,7 @@ import { nextui } from "@nextui-org/react";
 import { colord, extend } from "colord";
 import mixPlugin from "colord/plugins/mix";
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/types/config";
 
 extend([mixPlugin]);
 
@@ -227,7 +228,7 @@ const config: Config = {
         },
       },
     }),
-    function ({ addVariant }) {
+    function ({ addVariant }: PluginAPI) {
       addVariant("child", "&>*");
       addVariant("child-hover", "&>*:hover");
     },
