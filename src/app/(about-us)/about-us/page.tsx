@@ -78,15 +78,7 @@ export default function AboutPage() {
 
       {/* Map and Statistics Section */}
       <section className="container mx-auto px-4 py-16 text-center md:text-start">
-        <div className="flex flex-col items-center gap-8 md:flex-row">
-          <div className="flex-1">
-            <Image
-              src="/images/about-us/iran.png"
-              alt="Map"
-              width={400}
-              height={400}
-            />
-          </div>
+        <div className="flex flex-col items-center gap-32 md:flex-row">
           <div className="flex-1 space-y-20">
             <div className="space-y-5">
               <h3 className="text-xl md:text-2xl">
@@ -110,6 +102,16 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="flex flex-1 items-center justify-center">
+            <Image
+              src="/images/about-us/iran.png"
+              alt="Map"
+              width={400}
+              height={400}
+              className="object-scale-down object-center"
+            />
           </div>
         </div>
       </section>
