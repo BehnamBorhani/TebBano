@@ -83,7 +83,7 @@ export default function RootLayout({
       dir="rtl"
       className={`${roboto.variable} ${iranYekan.variable}`}
     >
-      <body className={`font-yekan`}>
+      <body className={`bg-[#E6E6EE] font-yekan`}>
         <StoreProvider>
           <QueryProvider>
             <NextUIProvider>
