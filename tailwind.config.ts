@@ -231,6 +231,7 @@ const config: Config = {
     function ({ addVariant }: PluginAPI) {
       addVariant("child", "&>*");
       addVariant("child-hover", "&>*:hover");
+      addVariant("not-first", "&>*:not(:first-child)");
     },
   ],
   darkMode: "class",

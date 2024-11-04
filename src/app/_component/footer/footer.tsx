@@ -1,10 +1,47 @@
 import { Input } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
+import { MyButton } from "../button/MyButton";
 
 export const Footer: React.FC = () => {
   return (
     <>
+      <section className="bg-transparent pb-[28rem] text-white-50 md:pb-60">
+        <div className="bg-logo2 md:y-20 z-20 flex items-center justify-center rounded-t-3xl pb-20 pt-10 shadow-2xl md:rounded-t-4xl">
+          <div className="container flex flex-col items-center justify-center gap-4 px-10 md:gap-8 md:pt-10">
+            <h2 className="border-b-2 border-white-50 pb-4 text-2xl font-bold md:text-4xl">
+              با ما در ارتباط باشید
+            </h2>
+            <p className="text-center text-lg font-light md:text-xl">
+              مقاله های ماهانه ما باعث میشود شما درباره لایف استایل، آخرین اخبار
+              دنیای پزشکی و تلاش های ما برای بهبود دسترسی کاربران باخبر شوید
+            </p>
+            <div className="flex scale-90 gap-4 md:w-1/2 md:scale-100">
+              <MyButton
+                color="secondary"
+                radius="full"
+                size="lg"
+                className="mr-auto px-6 py-2.5 text-xl font-bold"
+              >
+                <Image
+                  src="/images/icons/send.svg"
+                  alt="send-icon"
+                  width={25}
+                  height={25}
+                />
+                ارسال
+              </MyButton>
+              <input
+                type="text"
+                className="flex-1 rounded-full px-6 py-2 text-mayBe-900"
+                placeholder="example@gmail.com"
+                dir="ltr"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="absolute bottom-0 w-full bg-[#7774BA]">
         <div className="z-30 flex items-center justify-center rounded-t-3xl bg-white-50 pb-5 shadow-2xl md:rounded-t-4xl">
           <div className="container items-center justify-center gap-16 px-10 md:flex md:py-10">
