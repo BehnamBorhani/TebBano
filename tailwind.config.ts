@@ -166,6 +166,15 @@ const config: Config = {
       container: {
         center: true,
       },
+      keyframes: {
+        anticlockwise: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
+        },
+      },
+      animation: {
+        anticlockwise: "anticlockwise 1s linear infinite",
+      },
       boxShadow: {
         sm: "0px 2px 4px 0px rgba(0, 0, 0, 0.12)",
         DEFAULT: "0px 4px 8px 0px rgba(0, 0, 0, 0.10)",

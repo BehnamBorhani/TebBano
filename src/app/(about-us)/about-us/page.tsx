@@ -2,7 +2,9 @@
 "use client";
 
 import { Accordion } from "@/app/_component/accordion";
+import Counter from "@/app/_component/counter/counter";
 import { aboutUsFeatures } from "@/data/about-us-features";
+import { AboutUsStatistics } from "@/data/about-us-statistics";
 import { Button, Input } from "@nextui-org/react";
 import Image from "next/image";
 
@@ -14,7 +16,7 @@ export default function AboutPage() {
         <h1 className="my-4 text-4xl font-bold">
           ماموریت ما در طب بانو رزرو سلامتی شماست.
         </h1>
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-mayBe-800">
+        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-mayBe-900">
           تب بانو به مردم کمک میکند تا در مسیر زندگی، جسم و روانی سالم تر و طول
           عمر بیشتری داشته باشند. چشم انداز ما، دسترسی آسان تر، شفاف و کم هزینه
           تر به خدمات درمانی است.
@@ -25,7 +27,7 @@ export default function AboutPage() {
       <section className="container mx-auto flex flex-col justify-between gap-24 px-4 py-16 md:flex-row">
         <div className="flex-1 text-right">
           <h2 className="mb-4 text-2xl font-bold">داستان طب بانو</h2>
-          <p className="text-justify text-lg leading-relaxed">
+          <p className="text-justify text-lg leading-relaxed text-mayBe-900">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
@@ -75,7 +77,7 @@ export default function AboutPage() {
       </section>
 
       {/* Map and Statistics Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
+      <section className="container mx-auto px-4 py-16 text-center md:text-start">
         <div className="flex flex-col items-center gap-8 md:flex-row">
           <div className="flex-1">
             <Image
@@ -85,16 +87,29 @@ export default function AboutPage() {
               height={400}
             />
           </div>
-          <div className="grid flex-1 grid-cols-2 gap-4 text-center">
-            <div>
-              <p className="text-4xl font-bold text-primary">+1,000,000</p>
-              <p className="text-mayBe-800">رزرو دکتر موفق</p>
+          <div className="flex-1 space-y-20">
+            <div className="space-y-5">
+              <h3 className="text-xl md:text-2xl">
+                در مسیر پیشرفت با همراهی شما
+              </h3>
+
+              <p className="text-mayBe-900">
+                تب بانو به مردم کمک میکند تا در مسیر زندگی، جسم و روانی سالم تر
+                و طول عمر بیشتری داشته باشند. چشم انداز ما، دسترسی آسان تر، شفاف
+                و کم هزینه تر به خدمات درمانی است.
+              </p>
             </div>
-            <div>
-              <p className="text-4xl font-bold text-primary">+250</p>
-              <p className="text-mayBe-800">شهر تحت پوشش</p>
+
+            <div className="grid flex-1 grid-cols-2 gap-x-4 gap-y-16 text-center">
+              {AboutUsStatistics.map((item) => (
+                <div key={item.title}>
+                  <div className="flex justify-center text-4xl font-bold text-primary">
+                    <Counter end={item.value} />+
+                  </div>
+                  <p className="text-mayBe-900">{item.title}</p>
+                </div>
+              ))}
             </div>
-            {/* Repeat for other statistics */}
           </div>
         </div>
       </section>
