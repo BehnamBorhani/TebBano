@@ -171,9 +171,14 @@ const config: Config = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(-360deg)" },
         },
+        clockwise: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
-        anticlockwise: "anticlockwise 1s linear infinite",
+        anticlockwise: "anticlockwise 60s linear infinite",
+        clockwise: "clockwise 60s linear infinite",
       },
       boxShadow: {
         sm: "0px 2px 4px 0px rgba(0, 0, 0, 0.12)",
@@ -241,6 +246,17 @@ const config: Config = {
       addVariant("child", "&>*");
       addVariant("child-hover", "&>*:hover");
       addVariant("not-first", "&>*:not(:first-child)");
+    },
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".border-dash-offset": {
+          borderWidth: "3px",
+          borderStyle: "dashed",
+          borderImage:
+            "radial-gradient(to right, black 0, black 10px, transparent 10px, transparent 20px) 1",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
     },
   ],
   darkMode: "class",

@@ -5,7 +5,7 @@ import { Accordion } from "@/app/_component/accordion";
 import Counter from "@/app/_component/counter/counter";
 import { aboutUsFeatures } from "@/data/about-us-features";
 import { AboutUsStatistics } from "@/data/about-us-statistics";
-import { Button, Input } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
           ماموریت ما در طب بانو رزرو سلامتی شماست.
         </h1>
         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-mayBe-900">
-          تب بانو به مردم کمک میکند تا در مسیر زندگی، جسم و روانی سالم تر و طول
+          طبانو به مردم کمک میکند تا در مسیر زندگی، جسم و روانی سالم تر و طول
           عمر بیشتری داشته باشند. چشم انداز ما، دسترسی آسان تر، شفاف و کم هزینه
           تر به خدمات درمانی است.
         </p>
