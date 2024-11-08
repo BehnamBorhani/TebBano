@@ -176,6 +176,12 @@ const config: Config = {
           "100%": { transform: "rotate(360deg)" },
         },
       },
+      rotate: {
+        25: "25deg",
+        65: "65deg",
+        115: "115deg",
+        155: "155deg",
+      },
       animation: {
         anticlockwise: "anticlockwise 60s linear infinite",
         clockwise: "clockwise 60s linear infinite",
