@@ -253,7 +253,7 @@ const config: Config = {
       addVariant("child-hover", "&>*:hover");
       addVariant("not-first", "&>*:not(:first-child)");
     },
-    function ({ addUtilities }) {
+    function ({ addUtilities }: any) {
       const newUtilities = {
         ".border-dash-offset": {
           borderWidth: "3px",
