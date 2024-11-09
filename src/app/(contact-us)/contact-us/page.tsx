@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar } from "@/app/_component/avatar";
+import { MyButton } from "@/app/_component/button/MyButton";
 
 const ContactUs = () => {
   return (
@@ -48,6 +49,16 @@ const ContactUs = () => {
               placeholder="پیام مورد نظر خود را وارد نمایید تا در اولین فرصت همکاران ما با شما ارتباط بگیرند!"
             />
           </div>
+
+          <MyButton
+            color="primarySolid"
+            fullWidth
+            radius="full"
+            size="lg"
+            className="mt-20"
+          >
+            ثبت نظر شما
+          </MyButton>
         </form>
       </div>
 
