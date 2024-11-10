@@ -19,7 +19,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
     <div className="text-md h-full min-h-full w-full select-none overflow-hidden rounded-3xl bg-white-50 px-4 py-3 shadow-xl md:rounded-4xl md:px-9 md:py-7 md:text-xl">
       <div className="card-header flex flex-col items-center justify-center md:flex-row md:justify-start md:gap-7">
         <Avatar src={`https://cdn.paziresh24.com/${image}`} />
-        <div className="title text-center">
+        <div className="title text-center md:text-start">
           <h3 className="text-xl font-bold text-icon-500 md:text-2xl">
             {display_name}
           </h3>

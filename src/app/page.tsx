@@ -6,8 +6,6 @@ import { homeFeatures } from "@/data/home-features";
 import HomeFeature from "./_component/home-feature/home-feature";
 import { TestimonialList } from "./_component/testimonial/testimonial-list";
 import { testimonials } from "@/data/testimonial";
-import { MyButton } from "./_component/button/MyButton";
-import Image from "next/image";
 
 async function getِDoctors(count: number): Promise<[]> {
   const res = await fetch(
