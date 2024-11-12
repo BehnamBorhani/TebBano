@@ -1,8 +1,26 @@
-import React from "react";
-import { Input } from "../input";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import { useAppDispatch } from "@/hooks/redux-custom-hooks";
+import { setSearchQuery } from "@/store/search.slice";
+import { useRouter } from "next/navigation";
 
 export const SearchBox: React.FC = () => {
+  const [query, setQuery] = useState("");
+  const dispatch = useAppDispatch();
+  const router = useRouter();
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter" && query.trim()) {
+      router.push(`/search/${query}`);
+    }
+  };
+
+  const handleSearchQuery = (event) => {
+    setQuery(event.target.value);
+    dispatch(setSearchQuery(event.target.value));
+  };
+
   return (
     <div className="flex h-full items-center justify-between rounded-4xl border-2 border-icon-500 bg-white-50 px-2 py-2 md:px-5">
       <div className="input-container flex flex-1 items-center">
@@ -13,10 +31,12 @@ export const SearchBox: React.FC = () => {
           height={35}
           className="size-7"
         />
-        <Input
-          color="primary"
+        <input
           className="border-none text-xl !outline-none"
           placeholder="نام بیماری، تخصص، پزشک، بیمارستان و ..."
+          value={query}
+          onChange={handleSearchQuery}
+          onKeyUp={handleKeyDown}
         />
       </div>
 

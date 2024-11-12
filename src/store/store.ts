@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import exampleSlice from "./example.slice";
+import searchQuerySlice from "./search.slice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       example: exampleSlice,
+      searchQuery: searchQuerySlice,
     },
   });
 };
