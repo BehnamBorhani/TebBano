@@ -19,7 +19,7 @@ export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && query.trim()) {
-      router.push(`/search/${query}`);
+      router.push(`/search/${selectedLocation.en_slug}/${query}`);
     }
   };
 

@@ -3,26 +3,34 @@ import { DoctorCardList } from "@/app/(doctors)/_components/doctor-card-list";
 import { Doctor } from "@/app/(doctors)/_types/doctor.model";
 import { API_URL } from "@/configs/global";
 
-async function getِDoctors(count: number, query: string): Promise<[]> {
-  const res = await fetch(`${API_URL}/search/tehran?text=${query}`, {
+async function getِDoctors(
+  count: number,
+  location: string,
+  query: string,
+): Promise<[]> {
+  const response = await fetch(`${API_URL}/search/${location}?text=${query}`, {
     cache: "no-store",
-    next: { revalidate: 60 * 60 * 24 },
   });
-  const data = await res.json();
-  return data.search.result.slice(0, count);
+
+  if (response.ok) {
+    const data = await response.json();
+    return data.search.result;
+  } else {
+    return [];
+  }
 }
 
 export default async function SearchResultsPage({
   params,
 }: {
-  params: { query: string };
+  params: { location: string; query: string };
 }) {
-  const { query } = params;
-  const doctorsData: Doctor[] = await getِDoctors(24, query);
+  const { location, query } = params;
+  const doctorsData: Doctor[] = await getِDoctors(24, location, query);
 
   return (
-    <div>
-      <h1>Search Results for: {query}</h1>
+    <div className="min-h-screen">
+      <h2>نتیجه جستجو:</h2>
       {/* Display search results here */}
       <div className="grid grid-cols-3 gap-4">
         {doctorsData?.map((doctor) => (

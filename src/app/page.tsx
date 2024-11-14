@@ -8,7 +8,7 @@ import { TestimonialList } from "./_component/testimonial/testimonial-list";
 import { testimonials } from "@/data/testimonial";
 import { Location } from "./_component/city-modal/types/api-response.model";
 
-async function getِDoctors(count: number): Promise<[]> {
+async function getِDoctors(count: number): Promise<Doctor[]> {
   const res = await fetch(
     `${API_URL}/search/tehran?text=%D9%85%D8%AA%D8%AE%D8%B5%D8%B5+%D8%B2%D9%86%D8%A7%D9%86+%D9%88+%D8%B2%D8%A7%DB%8C%D9%85%D8%A7%D9%86`,
     {
@@ -20,7 +20,7 @@ async function getِDoctors(count: number): Promise<[]> {
   return data.search.result.slice(0, count);
 }
 
-async function getِLocations(): Promise<[]> {
+async function getِLocations(): Promise<Location> {
   const formData = new FormData();
   formData.append("table", JSON.stringify(["province", "city"]));
 
