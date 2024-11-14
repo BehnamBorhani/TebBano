@@ -1,31 +1,24 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useAppDispatch } from "@/hooks/redux-custom-hooks";
-import { setSearchQuery } from "@/store/search.slice";
 import { useRouter } from "next/navigation";
 import CityModal from "../city-modal/city-modal";
 import type { Location } from "../city-modal/types/api-response.model";
 
 export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
+  const [query, setQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState({
     en_slug: "tehran",
     name: "تهران",
   });
-  const [query, setQuery] = useState("");
-  const dispatch = useAppDispatch();
+
   const router = useRouter();
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && query.trim()) {
       router.push(`/search/${selectedLocation.en_slug}/${query}`);
     }
-  };
-
-  const handleSearchQuery = (event) => {
-    setQuery(event.target.value);
-    dispatch(setSearchQuery(event.target.value));
   };
 
   return (
@@ -43,7 +36,7 @@ export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
             className="border-none text-xl !outline-none"
             placeholder="نام بیماری، تخصص، پزشک، بیمارستان و ..."
             value={query}
-            onChange={handleSearchQuery}
+            onChange={(event) => setQuery(event.target.value)}
             onKeyUp={handleKeyDown}
           />
         </div>

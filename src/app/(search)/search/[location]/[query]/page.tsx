@@ -4,9 +4,9 @@ import { Doctor } from "@/app/(doctors)/_types/doctor.model";
 import { API_URL } from "@/configs/global";
 
 async function getِDoctors(
-  count: number,
   location: string,
   query: string,
+  count: number = 100,
 ): Promise<[]> {
   const response = await fetch(`${API_URL}/search/${location}?text=${query}`, {
     cache: "no-store",
@@ -14,7 +14,7 @@ async function getِDoctors(
 
   if (response.ok) {
     const data = await response.json();
-    return data.search.result;
+    return data.search.result.slice(0, count);
   } else {
     return [];
   }
@@ -26,7 +26,7 @@ export default async function SearchResultsPage({
   params: { location: string; query: string };
 }) {
   const { location, query } = params;
-  const doctorsData: Doctor[] = await getِDoctors(24, location, query);
+  const doctorsData: Doctor[] = await getِDoctors(location, query);
 
   return (
     <div className="min-h-screen">

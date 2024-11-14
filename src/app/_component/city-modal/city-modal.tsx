@@ -23,6 +23,11 @@ export default function CityModal({
     setIsOpen(false);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+    setFilterValue("");
+  };
+
   const filteredLocations = locations.province.filter((provinc) =>
     provinc.name.includes(filterValue),
   );
@@ -33,11 +38,7 @@ export default function CityModal({
 
   return (
     <Transition show={isOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="relative z-50"
-        onClose={() => setIsOpen(false)}
-      >
+      <Dialog as="div" className="relative z-50" onClose={handleClose}>
         <TransitionChild
           as={Fragment}
           enter="ease-out duration-300"
@@ -65,7 +66,7 @@ export default function CityModal({
               <div className="flex items-center justify-between border-b px-6 py-4">
                 <h2 className="text-lg font-medium">انتخاب شهر</h2>
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleClose}
                   className="text-gray-500 hover:text-gray-700"
                 >
                   ×
