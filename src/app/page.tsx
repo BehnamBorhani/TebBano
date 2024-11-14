@@ -6,6 +6,7 @@ import { homeFeatures } from "@/data/home-features";
 import HomeFeature from "./_component/home-feature/home-feature";
 import { TestimonialList } from "./_component/testimonial/testimonial-list";
 import { testimonials } from "@/data/testimonial";
+import { Location } from "./_component/city-modal/types/api-response.model";
 
 async function getِDoctors(count: number): Promise<[]> {
   const res = await fetch(
@@ -19,12 +20,27 @@ async function getِDoctors(count: number): Promise<[]> {
   return data.search.result.slice(0, count);
 }
 
+async function getِLocations(): Promise<[]> {
+  const formData = new FormData();
+  formData.append("table", JSON.stringify(["province", "city"]));
+
+  const res = await fetch(`https://www.paziresh24.com/api/getbaseinfo`, {
+    method: "POST",
+    body: formData,
+    cache: "no-store",
+    next: { revalidate: 60 * 60 * 24 },
+  });
+  const data = await res.json();
+  return data.result;
+}
+
 export default async function Home() {
   const doctorsData: Doctor[] = await getِDoctors(12);
+  const locationsData: Location = await getِLocations();
 
   return (
     <div className="bg-[#E6E6EE]">
-      <HomeHeroSection />
+      <HomeHeroSection locations={locationsData} />
 
       <section className="rounded-t-3xl bg-white-50 py-10 shadow-2xl md:rounded-t-5xl md:py-20 md:pt-20">
         <div className="container">

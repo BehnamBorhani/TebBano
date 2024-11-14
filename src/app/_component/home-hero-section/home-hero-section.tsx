@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { SearchBox } from "../search-box";
 import { MyButton } from "../button/MyButton";
+import { Location } from "../city-modal/types/api-response.model";
 
-export const HomeHeroSection: React.FC = () => {
+export const HomeHeroSection: React.FC<{
+  locations: Location;
+}> = ({ locations }) => {
   return (
     <section className="container relative flex flex-col-reverse md:flex-row md:justify-between">
       <div className="title-container flex flex-col justify-center gap-16 xl:mt-32">
@@ -22,7 +25,7 @@ export const HomeHeroSection: React.FC = () => {
         </div>
 
         <div className="h-12 w-full md:h-16">
-          <SearchBox />
+          <SearchBox locations={locations} />
         </div>
 
         <div className="hidden items-center gap-4 md:flex">
