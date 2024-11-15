@@ -17,8 +17,13 @@ export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && query.trim()) {
-      router.push(`/search/${selectedLocation.en_slug}/${query}#searchbox`);
+      event.preventDefault();
+      search();
     }
+  };
+
+  const search = () => {
+    router.push(`/search/${selectedLocation.en_slug}/${query}#searchbox`);
   };
 
   return (
@@ -30,7 +35,8 @@ export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
             alt="search-icon"
             width={35}
             height={35}
-            className="size-6 md:size-7"
+            className="size-6 cursor-pointer md:size-7"
+            onClick={search}
           />
           <input
             className="flex-1 border-none !outline-none md:text-xl"
