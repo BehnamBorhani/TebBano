@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   return (
     <>
       <section className="bg-transparent pb-[28rem] text-white-50 md:pb-60">
-        <div className="bg-logo2 md:y-20 z-20 flex items-center justify-center rounded-t-3xl pb-20 pt-10 shadow-2xl md:rounded-t-4xl">
+        <div className="bg-logo2 z-20 flex items-center justify-center rounded-t-3xl pb-28 pt-10 shadow-2xl md:rounded-t-4xl md:pb-36">
           <div className="container flex flex-col items-center justify-center gap-4 px-10 md:gap-8 md:pt-10">
             <h2 className="border-b-2 border-white-50 pb-4 text-2xl font-bold md:text-4xl">
               با ما در ارتباط باشید

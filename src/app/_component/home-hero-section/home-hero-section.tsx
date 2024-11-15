@@ -11,13 +11,13 @@ export const HomeHeroSection: React.FC<{
 }> = ({ locations }) => {
   return (
     <section className="container relative flex flex-col-reverse md:flex-row md:justify-between">
-      <div className="title-container flex flex-col justify-center gap-16 xl:mt-32">
+      <div className="title-container flex flex-col justify-center gap-16">
         <div className="hidden w-full space-y-4 md:block">
-          <h1 className="text-5xl font-bold">
+          <h1 className="font-bold md:text-3xl lg:text-5xl">
             کنارتان هستیم با بهترین{" "}
             <span className="text-third-600">متخصصان</span>
           </h1>
-          <p className="text-2xl font-medium text-mayBe-800">
+          <p className="text-lg font-medium text-mayBe-800 lg:text-2xl">
             در طبانو ما بهترین متخصصان را در سراسر کشور دورهم جمع کرده ایم
             <br />
             تا بهترین خدمات را به شما ارایه دهیم.

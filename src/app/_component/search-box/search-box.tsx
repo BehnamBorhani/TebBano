@@ -24,16 +24,16 @@ export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
   return (
     <>
       <div className="flex h-full items-center justify-between rounded-4xl border-2 border-icon-500 bg-white-50 px-2 py-2 md:px-5">
-        <div className="input-container flex flex-1 items-center gap-4">
+        <div className="input-container flex flex-1 items-center gap-1 overflow-hidden md:gap-4">
           <Image
             src="/images/icons/search.svg"
             alt="search-icon"
             width={35}
             height={35}
-            className="size-7"
+            className="size-6 md:size-7"
           />
           <input
-            className="flex-1 border-none text-xl !outline-none"
+            className="flex-1 border-none !outline-none md:text-xl"
             placeholder="نام بیماری، تخصص، پزشک، بیمارستان و ..."
             value={query}
             onChange={(event) => setQuery(event.target.value)}
@@ -52,15 +52,15 @@ export const SearchBox: React.FC<{ locations: Location }> = ({ locations }) => {
             alt="location-icon"
             width={35}
             height={35}
-            className="size-7"
+            className="size-5 md:size-7"
           />
-          <span className="text-xl">{selectedLocation.name}</span>
+          <span className="md:text-xl">{selectedLocation.name}</span>
           <Image
             src="/images/icons/arrow.svg"
             alt="arrow-icon"
             width={30}
             height={30}
-            className="size-6 translate-y-1"
+            className="size-5 translate-y-1 md:size-6"
           />
         </div>
       </div>
