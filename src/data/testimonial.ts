@@ -2,7 +2,7 @@ export const testimonials = [
   {
     image: "/images/testimonial/13.webp",
     name: "صبا صفوی",
-    skills: "خانه دار",
+    skills: "دانشجو",
     description:
       "خدمات عالی! تونستم در عرض چند دقیقه نوبت بگیرم و پاسخ به سوالاتم را سریعاً دریافت کردم.",
   },
@@ -28,14 +28,14 @@ export const testimonials = [
       "پلتفرم کاربرپسند و راحتی دارد. هیچ مشکلی در رزرو نداشتم. ممنون از تیمتان!",
   },
   {
-    image: "/images/testimonial/ten.jpg",
+    image: "/images/testimonial/4.jpg",
     name: "زهرا مقدم",
     skills: "مدیر فروش و بازاریابی",
     description:
       "نوبت‌دهی به راحتی انجام می‌شود و برای افراد شاغل که باید سریع نوبت بگیرند بهترین گزینه است!",
   },
   {
-    image: "/images/testimonial/nine.jpg",
+    image: "/images/testimonial/3.jpg",
     name: "صبا مختاری",
     skills: "طراح ui/ux",
     description:
@@ -49,14 +49,14 @@ export const testimonials = [
       "من از خدمات و مشاوره‌ها بسیار راضی هستم. توصیه می‌کنم به همه خانم‌ها! ",
   },
   {
-    image: "/images/testimonial/eleven.jpg",
+    image: "/images/testimonial/2.jpg",
     name: "سارا معینی",
     skills: "برنامه نویس ری‌اکت",
     description:
       "پزشک من بسیار با تجربه و مهربان بود ،احساس راحتی  با پزشک برای مشاوره آنلاین برای من بهترین حس بود.",
   },
   {
-    image: "/images/testimonial/twelve.jpg",
+    image: "/images/testimonial/5.jpg",
     name: "مریم کاظمی",
     skills: "ناخن کار",
     description:
