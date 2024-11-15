@@ -2,6 +2,8 @@ import { Input } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
 import { MyButton } from "../button/MyButton";
+import Link from "next/link";
+import { menuItems } from "@/data/menu-items";
 
 export const Footer: React.FC = () => {
   return (
@@ -63,29 +65,33 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <p className="text-center md:text-right">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است،
+                طبانو، تجلی دانش پزشکی با نگاهی ویژه به نیازهای بانوان است. هدف
+                ما ارتقاء سلامت جسمی و روحی زنان در دوران بارداری و زایمان
+                است،می‌کوشیم تا این سفر زیبا را برای شما آسان‌ تر کنیم.
               </p>
             </div>
 
             <div className="flex-[2] items-center justify-between md:flex">
               <div className="flex flex-1 items-center justify-between text-center md:text-start">
-                <div className="flex-1 space-y-6">
+                <div className="flex-1 space-y-2">
                   <span className="text-icon-300">دسترسی سریع</span>
-                  <ul className="space-y-4">
-                    <li>درباره ما</li>
-                    <li>تماس با ما</li>
-                    <li>بلاگ ها</li>
+                  <ul className="space-y-1">
+                    {menuItems.map((item, index) => (
+                      <li key={item.title + index}>
+                        <Link href={item.href}>{item.title}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
-                <div className="flex-1 space-y-6">
+                <div className="flex-1 space-y-2">
                   <span className="text-icon-300">لینک های کمکی</span>
-                  <ul className="space-y-4">
-                    <li>درباره ما</li>
-                    <li>تماس با ما</li>
-                    <li>بلاگ ها</li>
+                  <ul className="space-y-1">
+                    {menuItems.map((item, index) => (
+                      <li key={item.title + index}>
+                        <Link href={item.href}>{item.title}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -109,7 +115,7 @@ export const Footer: React.FC = () => {
                   }
                 />
                 <div className="flex items-center justify-end gap-6 child:cursor-pointer">
-                  <a href="mailto:info@dejavureve.com">
+                  <a href="mailto:Sabasfvi@gmail.com">
                     <Image
                       src="/images/icons/mail.svg"
                       width={25}
@@ -118,7 +124,7 @@ export const Footer: React.FC = () => {
                     />
                   </a>
                   <a
-                    href={`https://api.whatsapp.com/send/?phone=+989365041466&text=با سلام برای دریافت نوبت دکتر مزاحم شدم`}
+                    href={`https://api.whatsapp.com/send/?phone=+989391672109&text=با سلام برای دریافت نوبت دکتر مزاحم شدم`}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -129,7 +135,7 @@ export const Footer: React.FC = () => {
                       alt="whatsapp-icon"
                     />
                   </a>
-                  <a href="tel:+989365041466">
+                  <a href="tel:+989391672109">
                     <Image
                       src="/images/icons/call.png"
                       width={25}
@@ -137,7 +143,7 @@ export const Footer: React.FC = () => {
                       alt="call-icon"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://instagram.com/saba.sfvi" target="_blank">
                     <Image
                       src="/images/icons/instagram.svg"
                       width={25}

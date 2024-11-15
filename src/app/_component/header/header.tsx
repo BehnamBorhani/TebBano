@@ -14,18 +14,11 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react";
 import { MyButton } from "../button/MyButton";
+import { menuItems } from "@/data/menu-items";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  const menuItems = [
-    { title: "خانه", href: "/" },
-    { title: "پزشکان", href: "/search/tehran/زنان و زایمان" },
-    { title: "مقالات", href: "/blogs" },
-    { title: "درباره ما", href: "/about-us" },
-    { title: "تماس با ما", href: "/contact-us" },
-  ];
 
   return (
     <>
