@@ -45,7 +45,7 @@ export default async function SearchResultsPage({
   return (
     <section className="min-h-screen bg-[#E6E6EE]">
       <div className="container">
-        <header className="my-16 grid h-[800px] grid-cols-12 grid-rows-12 gap-6">
+        <header className="my-16 grid aspect-video grid-cols-12 grid-rows-12 md:gap-6">
           <div className="col-start-1 col-end-5 row-start-1 row-end-5 overflow-hidden rounded-4xl">
             <Image
               src="/images/gallery/g3.jpeg"
@@ -137,16 +137,13 @@ export default async function SearchResultsPage({
           </div>
         </header>
 
-        <div
-          className="flex h-16 items-center justify-center child:min-w-[700px]"
-          id="searchbox"
-        >
+        <div className="mx-auto w-full md:h-16 md:max-w-[700px]" id="searchbox">
           <SearchBox locations={locationsData} />
         </div>
-        <h2 className="mt-4 text-xl font-bold">نتیجه جستجو:</h2>
+        <h2 className="mt-8 text-xl font-bold">نتیجه جستجو:</h2>
 
         {/* Display search results here */}
-        <div className="grid grid-cols-3 gap-12 py-12">
+        <div className="grid grid-cols-1 gap-12 py-10 md:grid-cols-2 lg:grid-cols-3">
           {doctorsData.length ? (
             doctorsData?.map((doctor, index) => (
               <DoctorCard {...doctor} index={index} key={doctor._id} />

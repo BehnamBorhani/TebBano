@@ -10,8 +10,8 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="about-page bg-[#E6E6EE]">
-      <section className="container mx-auto px-4 py-16 text-center">
+    <div className="about-page space-y-8 bg-[#E6E6EE] md:space-y-16">
+      <section className="container py-8 text-center md:py-16">
         <h2 className="text-xl text-icon-500">درباره ما</h2>
         <h1 className="my-4 text-4xl font-bold">
           ماموریت ما در طبانو رزرو سلامتی شماست.
@@ -24,7 +24,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="container mx-auto flex flex-col justify-between gap-24 px-4 py-16 md:flex-row">
+      <section className="container mx-auto flex flex-col-reverse justify-between gap-12 md:flex-row md:gap-24">
         <div className="flex-1 text-right">
           <h2 className="mb-4 text-2xl font-bold">داستان طبانو</h2>
           <p className="text-justify text-lg leading-relaxed text-mayBe-900">
@@ -62,7 +62,7 @@ export default function AboutPage() {
 
       {/* Services Section */}
       <section className="container px-4 py-16">
-        <div className="flex h-[700px] flex-col justify-between gap-24  md:flex-row">
+        <div className="flex flex-col justify-between gap-12 md:max-h-[650px] md:flex-row md:gap-24">
           <div className="flex-1">
             <Image
               src="/images/about-us/about-us-2.jpeg"
@@ -83,8 +83,8 @@ export default function AboutPage() {
       </section>
 
       {/* Map and Statistics Section */}
-      <section className="container mx-auto px-4 py-16 text-center md:text-start">
-        <div className="flex flex-col items-center gap-32 md:flex-row">
+      <section className="container text-center md:text-start">
+        <div className="flex flex-col items-center gap-16 md:flex-row md:gap-32">
           <div className="flex-1 space-y-20">
             <div className="space-y-5">
               <h3 className="text-xl md:text-2xl">
@@ -127,7 +127,7 @@ export default function AboutPage() {
       </section>
 
       {/* Join Us Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
+      <section className="container py-16 text-center">
         <h2 className="mb-4 text-2xl font-bold">به ما بپیوندید</h2>
         <p className="mx-auto max-w-xl text-lg leading-relaxed text-mayBe-800">
           ما در طبانو به دنبال افراد مستعدیم...
@@ -138,25 +138,25 @@ export default function AboutPage() {
         <div className="mt-8 flex justify-center gap-4">
           {/* person- pictures */}
           <Image
-            src="/images/about-us/person-1.jpeg"
+            src="/images/about-us/person-5.jpeg"
             alt="person"
             width={100}
             height={100}
-            className="rounded-full"
-          />
-          <Image
-            src="/images/about-us/person-2.jpeg"
-            alt="person"
-            width={100}
-            height={100}
-            className="rounded-full"
+            className="aspect-square rounded-full object-cover object-center"
           />
           <Image
             src="/images/about-us/person-3.jpeg"
             alt="person"
             width={100}
             height={100}
-            className="rounded-full"
+            className="aspect-square rounded-full object-cover object-center"
+          />
+          <Image
+            src="/images/about-us/person-1.jpeg"
+            alt="person"
+            width={100}
+            height={100}
+            className="aspect-square rounded-full object-cover object-center"
           />
         </div>
         <Button color="primary" className="mt-8">

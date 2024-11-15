@@ -165,6 +165,12 @@ const config: Config = {
     extend: {
       container: {
         center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "0",
+          lg: "0",
+          xl: "0",
+        },
       },
       keyframes: {
         anticlockwise: {

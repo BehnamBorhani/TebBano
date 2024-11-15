@@ -4,10 +4,10 @@ import { MyButton } from "@/app/_component/button/MyButton";
 
 const ContactUs = () => {
   return (
-    <div className={"flex min-h-screen bg-[#E6E6EE]"}>
-      <div className="start h-[1000px] flex-1">
-        <form action="" className="space-y-6 p-24">
-          <div className="items-center justify-between gap-16 md:flex">
+    <div className={"min-h-screen space-y-8 bg-[#E6E6EE] md:flex"}>
+      <div className="start container flex-1 md:h-[1000px]">
+        <form action="" className="space-y-6 md:p-24">
+          <div className="items-center justify-between gap-16 space-y-8 md:flex md:space-y-0">
             <div className="flex flex-1 flex-col gap-5">
               <label htmlFor="" className="text-2xl text-icon-500">
                 نام
@@ -44,7 +44,7 @@ const ContactUs = () => {
               پیام شما
             </label>
             <textarea
-              className="rounded-4xl px-6 py-4 placeholder:text-mayBe-700"
+              className="rounded-3xl px-6 py-4 placeholder:text-mayBe-700 md:rounded-4xl"
               rows={10}
               placeholder="پیام مورد نظر خود را وارد نمایید تا در اولین فرصت همکاران ما با شما ارتباط بگیرند!"
             />
@@ -63,7 +63,7 @@ const ContactUs = () => {
       </div>
 
       <div className="end relative h-[1000px] flex-1 overflow-hidden rounded-2xl bg-white-50 bg-logo bg-right bg-no-repeat shadow-2xl child:scale-150">
-        <div className="absolute top-1/2 size-[800px] -translate-y-1/2 translate-x-1/2 rounded-full border-dash-offset">
+        <div className="absolute top-1/2 size-[550px] -translate-y-1/2 translate-x-1/2 rounded-full border-dash-offset md:size-[800px]">
           <div className="relative size-full animate-clockwise">
             <Avatar
               src={"/images/doctors/23.webp"}
@@ -115,7 +115,7 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/2 size-[600px] -translate-y-1/2 translate-x-1/2 rounded-full border-dash-offset">
+        <div className="absolute top-1/2 size-[400px] -translate-y-1/2 translate-x-1/2 rounded-full border-dash-offset md:size-[600px]">
           <div className="relative size-full animate-anticlockwise">
             <Avatar
               src={"/images/doctors/11.webp"}
@@ -167,7 +167,7 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="absolute top-1/2 size-[400px] -translate-y-1/2 translate-x-1/2 rounded-full  border-dash-offset">
+        <div className="absolute top-1/2 size-[250px] -translate-y-1/2 translate-x-1/2 rounded-full border-dash-offset  md:size-[400px]">
           <div className="relative size-full animate-clockwise">
             <Avatar
               src={"/images/doctors/19.webp"}
