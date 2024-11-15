@@ -21,6 +21,7 @@ export const Header: React.FC = () => {
 
   const menuItems = [
     { title: "خانه", href: "/" },
+    { title: "پزشکان", href: "/search/tehran/زنان و زایمان" },
     { title: "مقالات", href: "/blogs" },
     { title: "درباره ما", href: "/about-us" },
     { title: "تماس با ما", href: "/contact-us" },
@@ -34,7 +35,7 @@ export const Header: React.FC = () => {
         onMenuOpenChange={setIsMenuOpen}
         classNames={{
           base: "bg-transparent",
-          wrapper: "!container px-0",
+          wrapper: "!container md:px-0",
           item: [
             "flex",
             "relative",

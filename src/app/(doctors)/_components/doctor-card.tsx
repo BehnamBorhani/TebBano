@@ -3,8 +3,9 @@ import { Doctor } from "../_types/doctor.model";
 import { Avatar } from "@/app/_component/avatar";
 import Image from "next/image";
 import { MyButton } from "@/app/_component/button/MyButton";
+import { randomDates } from "@/data/dates";
 
-type DoctorCardProps = Doctor;
+type DoctorCardProps = Doctor & { index: number };
 
 export const DoctorCard: React.FC<DoctorCardProps> = ({
   display_name,
@@ -14,6 +15,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
   image,
   star,
   medical_code,
+  index,
 }) => {
   return (
     <div className="text-md h-full min-h-full w-full select-none overflow-hidden rounded-3xl bg-white-50 px-4 py-3 shadow-xl md:rounded-4xl md:px-9 md:py-7 md:text-xl">
@@ -49,8 +51,8 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
         </div>
 
         <div className="hidden items-center justify-between md:flex">
-          <h6 className=" text-mayBe-800">اولین نوبت خالی</h6>
-          <h5 className="">سه شنبه 23خرداد - 10:30</h5>
+          <h6 className="text-mayBe-800">اولین نوبت خالی</h6>
+          <h5 className="">{randomDates[index]}</h5>
         </div>
 
         <div className="hidden gap-2 pt-2 md:flex">

@@ -41,7 +41,7 @@ export const HomeHeroSection: React.FC<{
               color="icon"
               radius="full"
               size="lg"
-              className="mr-auto px-6 py-2.5 text-xl font-bold"
+              className="group mr-auto px-6 py-2.5 text-xl font-bold"
             >
               <Image
                 src="/images/icons/support.svg"

@@ -40,9 +40,9 @@ export const DoctorCardList = async ({ doctors }: { doctors: Doctor[] }) => {
         padding: "2rem",
       }}
     >
-      {doctors.map((doctor) => (
+      {doctors.map((doctor, index) => (
         <SwiperSlide key={doctor._id} className="ml-10">
-          <DoctorCard {...doctor} />
+          <DoctorCard {...doctor} index={index} />
         </SwiperSlide>
       ))}
     </Swiper>
