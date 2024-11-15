@@ -38,6 +38,7 @@ export const Footer: React.FC = () => {
                 className="flex-1 rounded-full px-6 py-2 text-mayBe-900"
                 placeholder="example@gmail.com"
                 dir="ltr"
+                tabIndex={-1}
               />
             </div>
           </div>
