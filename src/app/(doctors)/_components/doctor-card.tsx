@@ -4,6 +4,7 @@ import { Avatar } from "@/app/_component/avatar";
 import Image from "next/image";
 import { MyButton } from "@/app/_component/button/MyButton";
 import { randomDates } from "@/data/dates";
+import Link from "next/link";
 
 type DoctorCardProps = Doctor & { index: number };
 
@@ -25,11 +26,13 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
           <h3 className="text-xl font-bold text-icon-500 md:text-2xl">
             {display_name}
           </h3>
-          <h4 className="font-medium text-mayBe-800">{expertise.join("، ")}</h4>
+          <h4 className="font-medium text-mayBe-800">
+            {expertise?.join("، ")}
+          </h4>
         </div>
       </div>
 
-      <div className="card-body mt-4 space-y-2 md:mt-8 md:space-y-7">
+      <div className="card-body mt-4 space-y-2 md:mt-8 md:space-y-5">
         <div className="flex items-center justify-between">
           <h6 className=" text-mayBe-800">امتیاز</h6>
 
@@ -70,15 +73,21 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
 
         <hr />
 
-        <MyButton
-          color="third"
-          variant="bordered"
-          radius="full"
-          size="md"
-          fullWidth
+        <Link
+          href="https://www.goftino.com/c/aVIRWx"
+          target="_blank"
+          className="block"
         >
-          رزرو نوبت
-        </MyButton>
+          <MyButton
+            color="third"
+            variant="bordered"
+            radius="full"
+            size="md"
+            fullWidth
+          >
+            رزرو نوبت
+          </MyButton>
+        </Link>
       </div>
     </div>
   );

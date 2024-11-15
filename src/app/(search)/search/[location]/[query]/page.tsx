@@ -28,7 +28,6 @@ async function getِLocations(): Promise<Location> {
     method: "POST",
     body: formData,
     cache: "no-store",
-    next: { revalidate: 60 * 60 * 24 },
   });
   const data = await res.json();
   return data.result;

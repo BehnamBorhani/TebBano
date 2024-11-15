@@ -1,27 +1,27 @@
 export const testimonials = [
   {
-    image: "/images/testimonial/one.jpg",
+    image: "/images/testimonial/13.webp",
     name: "صبا صفوی",
     skills: "خانه دار",
     description:
       "خدمات عالی! تونستم در عرض چند دقیقه نوبت بگیرم و پاسخ به سوالاتم را سریعاً دریافت کردم.",
   },
   {
-    image: "/images/testimonial/eight.jpg",
+    image: "/images/testimonial/14.webp",
     name: "سارا علیزاده",
     skills: "حسابدار",
     description:
       "شرایط کرونا باعث شده بود برای مراجعه حضوری مردد باشم خصوصا برای مشکل من که لازم نبود در مطب حاضر باشم. این خدمات آنلاین بهترین گزینه بود.",
   },
   {
-    image: "/images/testimonial/two.jpg",
+    image: "/images/testimonial/6.webp",
     name: "درسا صدری",
     skills: "برنامه‌نویس وب",
     description:
       "واقعا از مشاوره آنلاین راضی بودم. پزشکان بسیار حرفه‌ای و دلسوز هستند.",
   },
   {
-    image: "/images/testimonial/nine.jpg",
+    image: "/images/testimonial/7.webp",
     name: "فاطمه محمدی",
     skills: "برنامه‌نویس و طراح وب",
     description:
@@ -35,14 +35,14 @@ export const testimonials = [
       "نوبت‌دهی به راحتی انجام می‌شود و برای افراد شاغل که باید سریع نوبت بگیرند بهترین گزینه است!",
   },
   {
-    image: "/images/testimonial/four.jpg",
+    image: "/images/testimonial/nine.jpg",
     name: "صبا مختاری",
     skills: "طراح ui/ux",
     description:
       "این سایت به من کمک کرد سوالاتم را درباره بارداری بپرسم. خیلی خوشحال شدم که پاسخ‌های دقیقی دریافت کردم.",
   },
   {
-    image: "/images/testimonial/three.jpg",
+    image: "/images/testimonial/9.webp",
     name: "فرزانه کوهستانی",
     skills: "برنامه‌نویس بک اند",
     description:
@@ -63,21 +63,21 @@ export const testimonials = [
       "محیط صمیمی و راحتی برای صحبت کردن با پزشک دارم. حتماً دوباره از خدمات استفاده می‌کنم.",
   },
   {
-    image: "/images/testimonial/five.jpg",
+    image: "/images/testimonial/10.webp",
     name: "سارا اسماعیلی",
     skills: "فروشنده",
     description:
       "اولین تجربه درمان من در سامانه طبانو واقعا برام جذاب بود. مشاوره با کیفیت، محیط یادگیری سریع و کاربرپسند. دمتون گرم",
   },
   {
-    image: "/images/testimonial/six.jpg",
+    image: "/images/testimonial/11.webp",
     name: "ثریا عسگری",
     skills: "آرایشگر",
     description:
       "من از اینکه توانستم با دکتر مورد نظر خود صحبت کنم خیلی خوشحالم. نوبت‌دهی ساده و سریع بود.",
   },
   {
-    image: "/images/testimonial/seven.jpg",
+    image: "/images/testimonial/12.webp",
     name: "مهتاب حکمتی",
     skills: "تریدر",
     description:
