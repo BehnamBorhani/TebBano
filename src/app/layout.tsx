@@ -9,6 +9,7 @@ import localFont from "next/font/local";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { NextUIProvider } from "@nextui-org/react";
 import { Footer } from "./_component/footer";
+import { ToastContainer } from "react-toastify";
 
 const roboto = Roboto_Serif({
   display: "swap",
@@ -87,6 +88,12 @@ export default function RootLayout({
         <StoreProvider>
           <QueryProvider>
             <NextUIProvider>
+              <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                rtl={true}
+              />
+
               <div className="relative">
                 <Header />
                 {children}

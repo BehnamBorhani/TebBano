@@ -3,18 +3,25 @@
 import React, { useState } from "react";
 import { MyButton } from "../button/MyButton";
 import Image from "next/image";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function EmailForm() {
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const sendEmail = async () => {
-    setMessage("");
-
     if (!email.trim()) {
-      setMessage("Please enter a valid email address.");
+      toast.error("لطفا ایمیل خود را وارد نمایید!");
       return;
     }
+
+    if (!emailRegex.test(email)) {
+      toast.error("ایمیل وارد شده نامعتبر است!");
+      return;
+    }
+
+    const toastId = toast.loading("در حال ارسال ایمیل..."); // Show loading toast
 
     try {
       const response = await fetch("/api/send-email", {
@@ -28,14 +35,31 @@ export default function EmailForm() {
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Email sent successfully!");
-        setEmail("");
+        toast.update(toastId, {
+          render: "ایمیل شما با موفقیت ثبت شد.",
+          type: "success",
+          isLoading: false,
+          autoClose: 3000,
+        });
+        setEmail(""); // Clear the input field
       } else {
-        setMessage(result.message || "Failed to send email.");
+        toast.update(toastId, {
+          render:
+            result.message ||
+            "خطایی در ارسال ایمیل رخ داده است! لطفا مجددا تلاش کنید.",
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      setMessage("An unexpected error occurred.");
+      toast.update(toastId, {
+        render: "خطایی در ارسال ایمیل رخ داده است! لطفا مجددا تلاش کنید.",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
     }
   };
 
@@ -66,7 +90,6 @@ export default function EmailForm() {
         onChange={(e) => setEmail(e.target.value)}
         tabIndex={-1}
       />
-      {message && <p className="mt-4 text-center">{message}</p>}
     </>
   );
 }
