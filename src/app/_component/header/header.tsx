@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="md:hidden"
           />
-          <NavbarBrand>
+          <NavbarBrand className="hidden md:flex">
             <Image
               src="/images/logo-icon.svg"
               alt="logo"
@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
               alt="logo"
               width={138}
               height={55}
-              className="hidden h-12 w-28 md:block"
+              className="h-12 w-28"
             />
           </NavbarBrand>
         </NavbarContent>
@@ -85,14 +85,30 @@ export const Header: React.FC = () => {
         </NavbarContent>
 
         <NavbarContent justify="end">
-          <NavbarItem className="hidden lg:flex">
+          {/* <NavbarItem className="hidden lg:flex">
             <Link href="/signin">ورود</Link>
           </NavbarItem>
           <NavbarItem>
             <MyButton as={Link} color="primary" href="/signin" variant="flat">
               ثبت‌نام
             </MyButton>
-          </NavbarItem>
+          </NavbarItem> */}
+          <NavbarBrand className="flex justify-end md:hidden">
+            <Image
+              src="/images/brand-logo.png"
+              alt="logo"
+              width={138}
+              height={55}
+              className="h-12 w-28"
+            />
+            <Image
+              src="/images/logo-icon.svg"
+              alt="logo"
+              width={100}
+              height={100}
+              className="size-16"
+            />
+          </NavbarBrand>
         </NavbarContent>
 
         <NavbarMenu>

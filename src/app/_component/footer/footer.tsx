@@ -4,6 +4,8 @@ import React from "react";
 import { MyButton } from "../button/MyButton";
 import Link from "next/link";
 import { menuItems } from "@/data/menu-items";
+import { MiniSearchBox } from "./mini-search";
+import EmailForm from "../eamil-form/eamil-form";
 
 export const Footer: React.FC = () => {
   return (
@@ -19,27 +21,7 @@ export const Footer: React.FC = () => {
               دنیای پزشکی و تلاش های ما برای بهبود دسترسی کاربران باخبر شوید
             </p>
             <div className="flex scale-90 gap-4 md:w-1/2 md:scale-100">
-              <MyButton
-                color="secondary"
-                radius="full"
-                size="lg"
-                className="mr-auto px-6 py-2.5 text-xl font-bold"
-              >
-                <Image
-                  src="/images/icons/send.svg"
-                  alt="send-icon"
-                  width={25}
-                  height={25}
-                />
-                ارسال
-              </MyButton>
-              <input
-                type="text"
-                className="flex-1 rounded-full px-6 py-2 text-mayBe-900"
-                placeholder="example@gmail.com"
-                dir="ltr"
-                tabIndex={-1}
-              />
+              <EmailForm />
             </div>
           </div>
         </div>
@@ -99,22 +81,8 @@ export const Footer: React.FC = () => {
 
               <div className="flex-1 space-y-6">
                 <span className="hidden text-icon-300 md:block">جستجو</span>
-                <Input
-                  type="text"
-                  placeholder="جستجو براساس موضوع"
-                  radius="full"
-                  fullWidth
-                  className=""
-                  endContent={
-                    <Image
-                      src="/images/icons/search.svg"
-                      width={25}
-                      height={25}
-                      className="pointer-events-none flex-shrink-0 text-2xl text-default-400"
-                      alt="search-icon"
-                    />
-                  }
-                />
+                <MiniSearchBox />
+
                 <div className="flex items-center justify-end gap-6 child:cursor-pointer">
                   <a href="mailto:Sabasfvi@gmail.com">
                     <Image
