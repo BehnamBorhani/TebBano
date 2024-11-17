@@ -1,65 +1,12 @@
 import React from "react";
 import { Avatar } from "@/app/_component/avatar";
-import { MyButton } from "@/app/_component/button/MyButton";
+import ContactForm from "./_components/contact-form";
 
 const ContactUs = () => {
   return (
     <div className={"min-h-screen space-y-8 bg-[#E6E6EE] md:flex"}>
       <div className="start container flex-1 md:h-[1000px]">
-        <form action="" className="space-y-6 md:p-24">
-          <div className="items-center justify-between gap-16 space-y-8 md:flex md:space-y-0">
-            <div className="flex flex-1 flex-col gap-5">
-              <label htmlFor="" className="text-2xl text-icon-500">
-                نام
-              </label>
-              <input
-                className="rounded-full px-6 py-4 placeholder:text-mayBe-700"
-                placeholder="نام"
-              />
-            </div>
-
-            <div className="flex flex-1 flex-col gap-5">
-              <label htmlFor="" className="text-2xl text-icon-500">
-                نام خانوادگی
-              </label>
-              <input
-                className="rounded-full px-6 py-4 placeholder:text-mayBe-700"
-                placeholder="نام خانوادگی"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-1 flex-col gap-5">
-            <label htmlFor="" className="text-2xl text-icon-500">
-              ایمیل
-            </label>
-            <input
-              className="rounded-full px-6 py-4 placeholder:text-mayBe-700"
-              placeholder="example@gmail.com"
-            />
-          </div>
-
-          <div className="flex flex-1 flex-col gap-5">
-            <label htmlFor="" className="text-2xl text-icon-500">
-              پیام شما
-            </label>
-            <textarea
-              className="rounded-3xl px-6 py-4 placeholder:text-mayBe-700 md:rounded-4xl"
-              rows={10}
-              placeholder="پیام مورد نظر خود را وارد نمایید تا در اولین فرصت همکاران ما با شما ارتباط بگیرند!"
-            />
-          </div>
-
-          <MyButton
-            color="primarySolid"
-            fullWidth
-            radius="full"
-            size="lg"
-            className="mt-20"
-          >
-            ثبت نظر شما
-          </MyButton>
-        </form>
+        <ContactForm />
       </div>
 
       <div className="end relative h-[1000px] flex-1 overflow-hidden rounded-2xl bg-white-50 bg-logo bg-right bg-no-repeat shadow-2xl child:scale-150">
