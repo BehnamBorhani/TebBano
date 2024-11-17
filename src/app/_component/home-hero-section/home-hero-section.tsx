@@ -35,7 +35,7 @@ export const HomeHeroSection: React.FC<{
             <Avatar src={"/images/doctors/female doctor 1.png"} size="large" />
           </div>
 
-          <Link href="https://www.goftino.com/c/aVIRWx" target="_blank">
+          <Link href="https://www.goftino.com/c/chEtU1" target="_blank">
             <MyButton
               variant="bordered"
               color="icon"

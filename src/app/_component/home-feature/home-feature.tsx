@@ -21,14 +21,14 @@ const HomeFeature = ({ feature }: { feature: Feature }) => {
         {feature.description}
       </p>
 
-      <MyButton
+      {/* <MyButton
         color="primary"
         variant="bordered"
         radius="full"
         className="hidden md:block"
       >
         {feature.action}
-      </MyButton>
+      </MyButton> */}
     </div>
   );
 };

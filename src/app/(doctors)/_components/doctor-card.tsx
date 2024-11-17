@@ -74,7 +74,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
         <hr />
 
         <Link
-          href="https://www.goftino.com/c/aVIRWx"
+          href="https://www.goftino.com/c/chEtU1"
           target="_blank"
           className="block"
         >
