@@ -159,9 +159,15 @@ export default function AboutPage() {
             className="aspect-square rounded-full object-cover object-center"
           />
         </div>
-        <Button color="primary" className="mt-8">
-          ارسال رزومه
-        </Button>
+
+        <a
+          href={`https://api.whatsapp.com/send/?phone=+989391672109&text=برای ارسال رزومه و پیوستن به خانواده طبانو پیام می‌دهم:)`}
+          target="_blank"
+        >
+          <Button color="primary" className="mt-8">
+            ارسال رزومه
+          </Button>
+        </a>
       </section>
     </div>
   );
