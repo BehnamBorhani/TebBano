@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { MyButton } from "@/app/_component/button/MyButton";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MyButton } from "@/app/[locale]/_component/button/MyButton";
 
 // Define the form inputs' types
 interface ContactFormInputs {

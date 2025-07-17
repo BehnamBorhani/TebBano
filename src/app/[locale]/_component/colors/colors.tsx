@@ -1,5 +1,5 @@
 import { colord } from "colord";
-import { tailwindColors } from "../../../../tailwind.config";
+import { tailwindColors } from "../../../../../tailwind.config";
 
 const getTextColor = (backgroundColor: string): string =>
   colord(backgroundColor).isDark() ? "#ddd" : "#333";

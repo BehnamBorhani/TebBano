@@ -1,10 +1,10 @@
 import React from "react";
 import { Doctor } from "../_types/doctor.model";
-import { Avatar } from "@/app/_component/avatar";
 import Image from "next/image";
-import { MyButton } from "@/app/_component/button/MyButton";
 import { randomDates } from "@/data/dates";
 import Link from "next/link";
+import { Avatar } from "@/app/[locale]/_component/avatar";
+import { MyButton } from "@/app/[locale]/_component/button/MyButton";
 
 type DoctorCardProps = Doctor & { index: number };
 

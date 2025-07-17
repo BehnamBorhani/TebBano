@@ -1,18 +1,20 @@
-// app/about/page.tsx
 "use client";
 
-import { Accordion } from "@/app/_component/accordion";
-import Counter from "@/app/_component/counter/counter";
 import { aboutUsFeatures } from "@/data/about-us-features";
 import { AboutUsStatistics } from "@/data/about-us-statistics";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
+import { Accordion } from "@/app/[locale]/_component/accordion";
+import Counter from "@/app/[locale]/_component/counter/counter";
+import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
+  const t = useTranslations("AboutUs");
+
   return (
     <div className="about-page space-y-8 bg-[#E6E6EE] md:space-y-16">
       <section className="container py-8 text-center md:py-16">
-        <h2 className="text-xl text-icon-500">درباره ما</h2>
+        <h2 className="text-xl text-icon-500">{t("title")}</h2>
         <h1 className="my-4 text-4xl font-bold">
           ماموریت ما در طبانو رزرو سلامتی شماست.
         </h1>

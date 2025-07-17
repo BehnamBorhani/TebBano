@@ -1,9 +1,8 @@
-import { DoctorCard } from "@/app/(doctors)/_components/doctor-card";
-import { Doctor } from "@/app/(doctors)/_types/doctor.model";
-import { Location } from "@/app/_component/city-modal/types/api-response.model";
-import { SearchBox } from "@/app/_component/search-box";
 import { API_URL } from "@/configs/global";
 import Image from "next/image";
+import { Doctor } from "@/app/[locale]/(doctors)/_types/doctor.model";
+import { SearchBox } from "@/app/[locale]/_component/search-box";
+import { DoctorCard } from "@/app/[locale]/(doctors)/_components/doctor-card";
 
 async function getِDoctors(
   location: string,

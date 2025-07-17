@@ -10,6 +10,9 @@ import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 import { NextUIProvider } from "@nextui-org/react";
 import { Footer } from "./_component/footer";
 import { ToastContainer } from "react-toastify";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const roboto = Roboto_Serif({
   display: "swap",
@@ -21,42 +24,42 @@ const roboto = Roboto_Serif({
 const iranYekan: NextFontWithVariable = localFont({
   src: [
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanThin.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanThin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanLight.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanLight.ttf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanRegular.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanRegular.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanMedium.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanMedium.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanBold.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanBold.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanExtraBold.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanExtraBold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanBlack.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanBlack.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/IRANYekan/IRANYekanExtraBlack.ttf",
+      path: "../../../public/fonts/IRANYekan/IRANYekanExtraBlack.ttf",
       weight: "800",
       style: "normal",
     },
@@ -73,35 +76,44 @@ export const metadata: Metadata = {
   icons: "/images/favicon.png",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
     <html
-      lang="fa"
+      lang={locale}
       dir="rtl"
       className={`${roboto.variable} ${iranYekan.variable}`}
     >
       <body className={`bg-[#E6E6EE] font-yekan`}>
-        <StoreProvider>
-          <QueryProvider>
-            <NextUIProvider>
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                rtl={true}
-              />
+        <NextIntlClientProvider>
+          <StoreProvider>
+            <QueryProvider>
+              <NextUIProvider>
+                <ToastContainer
+                  position="top-right"
+                  autoClose={5000}
+                  rtl={true}
+                />
 
-              <div className="relative">
-                <Header />
-                {children}
-                <Footer />
-              </div>
-            </NextUIProvider>
-          </QueryProvider>
-        </StoreProvider>
+                <div className="relative">
+                  <Header />
+                  {children}
+                  <Footer />
+                </div>
+              </NextUIProvider>
+            </QueryProvider>
+          </StoreProvider>
+        </NextIntlClientProvider>
 
         <Script
           id="goftino-widget"

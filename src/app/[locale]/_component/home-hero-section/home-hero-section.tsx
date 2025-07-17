@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar } from "@/app/_component/avatar";
+import { Avatar } from "@/app/[locale]/_component/avatar";
 import Image from "next/image";
 import Link from "next/link";
 import { SearchBox } from "../search-box";

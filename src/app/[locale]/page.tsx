@@ -1,4 +1,3 @@
-import { HomeHeroSection } from "@/app/_component/home-hero-section";
 import { DoctorCardList } from "./(doctors)/_components/doctor-card-list";
 import { API_URL } from "@/configs/global";
 import { Doctor } from "./(doctors)/_types/doctor.model";
@@ -7,8 +6,10 @@ import HomeFeature from "./_component/home-feature/home-feature";
 import { TestimonialList } from "./_component/testimonial/testimonial-list";
 import { testimonials } from "@/data/testimonial";
 import { Location } from "./_component/city-modal/types/api-response.model";
+import { HomeHeroSection } from "@/app/[locale]/_component/home-hero-section";
+import { getTranslations } from "next-intl/server";
 
-async function getِDoctors(count: number): Promise<Doctor[]> {
+async function getDoctors(count: number): Promise<Doctor[]> {
   const res = await fetch(`${API_URL}/search/tehran?text=زنان و زایمان`, {
     cache: "no-store",
   });
@@ -16,7 +17,7 @@ async function getِDoctors(count: number): Promise<Doctor[]> {
   return data.search.result.slice(0, count);
 }
 
-async function getِLocations(): Promise<Location> {
+async function getLocations(): Promise<Location> {
   const formData = new FormData();
   formData.append("table", JSON.stringify(["province", "city"]));
 
@@ -30,8 +31,9 @@ async function getِLocations(): Promise<Location> {
 }
 
 export default async function Home() {
-  const doctorsData: Doctor[] = await getِDoctors(20);
-  const locationsData: Location = await getِLocations();
+  const doctorsData: Doctor[] = await getDoctors(20);
+  const locationsData: Location = await getLocations();
+  const t = await getTranslations("HomePage");
 
   return (
     <div className="bg-[#E6E6EE]">
@@ -40,7 +42,7 @@ export default async function Home() {
       <section className="rounded-t-3xl bg-white-50 py-10 shadow-2xl md:rounded-t-5xl md:py-20 md:pt-20">
         <div className="container">
           <h2 className="mb-5 text-center text-xl font-bold md:text-start md:text-3xl">
-            معرفی پزشکان
+            {t("doctorsIntroductions")}
           </h2>
           <DoctorCardList doctors={doctorsData} />
         </div>

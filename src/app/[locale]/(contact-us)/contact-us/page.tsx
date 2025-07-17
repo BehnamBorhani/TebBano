@@ -1,6 +1,6 @@
 import React from "react";
-import { Avatar } from "@/app/_component/avatar";
 import ContactForm from "./_components/contact-form";
+import { Avatar } from "@/app/[locale]/_component/avatar";
 
 const ContactUs = () => {
   return (
